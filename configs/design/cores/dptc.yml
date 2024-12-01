@@ -1,0 +1,167 @@
+DPTC:
+  v1:
+    devices:
+      mzm:
+        - LT_MZM
+      dac:
+        - DAC_2
+      adc:
+        - ADC_SAR_1
+      tia:
+        - TIA_1
+      waveguide:
+        - WG_Single_Strip
+      mrr_rerouter:
+        - LT_MRR_REROUTER
+      laser_splitter:
+        - Customized_Laser_Splitter
+      micro_comb:
+        - LT_Micro_Comb
+      on_chip_laser:
+        - Customized_Laser
+
+
+    core:
+      type: Crossbar
+      coherent: True
+      universal: True
+      forward: direct
+      ref: ""
+
+      range:
+        weight: full
+        input: full
+        output: full
+      
+      # width: W
+      width: 12
+      # height: H
+      height: 12
+      # num_wavelength: N
+      num_wavelength: 12
+
+      work_freq: 5
+
+      # Define the precision of the core
+      precision:
+        in_bit: 4
+        w_bit: 4
+        out_bit: 4
+      
+      netlist:
+        # Define any instances used for assemble the architecture
+        # If same type of device encoded different operand, please define them separately
+        # this would affect the energy calculation
+        instances:
+          i0: [mzm, 0]
+          i1: [dac, 0]
+          i2: [adc, 0]
+          i3: [mrr_rerouter, 0]
+          i4: [on_chip_laser, 0]
+          i5: [micro_comb, 0]
+          i6: [laser_splitter, 0]
+          i7: [node, 0]
+          i8: [tia, 0]
+          i9: [mzm, 0]
+          i10: [dac, 0]
+        # r c h w, cannot be negative or larger than Tile, Cores per tile, Core Height, Core Width
+        # It can also be arbitrary number
+        scaling_rules:
+          i0: H*R*N*C
+          i1: H*R*N*C
+          i2: (H*W)*R
+          i3: (H+W)*N*C*R*2
+          i4: R+C
+          i5: R+C
+          i6: ((ceil(H/2)*2-1)+(ceil(W/2)*2-1))*R*C
+          i7: H*W*R*C
+          i8: H*W*R*C
+          i9: W*C*N
+          i10: W*C*N
+
+        # This part only define the core longest insertion loss
+        # You can define the replicated device for insertion loss function to generate the longest path
+        # The number of replication is defined below in the replication section
+        nets:
+          n0: [i4, i5]
+          n1: [i5, i6(s)]
+          n2: [i6(e), i3(s)]
+          n3: [i3(e), i0]
+          n4: [i0, i7]
+          n5: [i7, i8]
+          n6: [i8, i2]
+          n7: [i1, i0]
+        
+        # Define the replication of the devices for connection in nets
+        # This part is separate from scaling rules, for any number of devices you defined here,
+        # will only be used for insertion loss calculation, not for scaling
+        replication:
+          i6: ceil(log2(max(H,W)))
+          i3: 2
+
+        # Specific for architecture that supports temporal integration
+        temporal_accum_factor:
+          duration: 3     #Cycles
+          devices: [i2, i8]
+
+          # Only core configuration will include memory part effected by temporal factor
+          memory: output 
+
+        # It currently only used for mmi scaling purpose, may used for other device scaling in the future
+        # [input ports, output ports], only define this if differernt from the default
+        ports_num: null
+
+        # Operand 1 Encoding Devices
+        # Affecting device energy calculation, highly related to dataflow
+        operand_1: [i0, i1]
+
+        # Operand 2 Encoding Devices
+        # Affecting device energy calculation, highly related to dataflow
+        operand_2: [i9, i10]
+
+        # Laser power distribution factor
+        # Highly related to the laser power calculation
+        # Distribution factor will be calculated as 10*log10(laser_power_distribution)
+        # Unique attribute for core configuration
+        laser_power_distribution: H*W
+
+        chip_mapping:
+          RF_EIC: [i1, i8, i5]
+          PIC_1: [i0, i7]
+          PIC_2: [i6, i9]
+        insertion_loss_final_device: node
+
+      # Core wise area is simply adding all parts together
+      device_spacing_flag: null
+      node_spacing_flag: null
+
+      # [TOP, BOTTOM, LEFT, RIGHT] Spacing
+      device_spacing: null
+      node_spacing: null
+    
+      bounding_box_estimator: null
+      device_counter_function: null
+
+      node:
+        DODE:
+          version: v1
+          file: default
+
+
+    # Adding core numbers (5, 1) (1, 1) (1, 5)
+
+    # Handle Architecture which doesn't require node
+
+    # Longest path is manually determined
+    # Manually indicate the insertion loss path {}
+    # [Include laser source in photonic device: need to have laser coupling loss] (fanout determined by architecture design)
+
+      
+
+      
+
+
+
+
+  
+        

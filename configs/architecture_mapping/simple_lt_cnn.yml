@@ -1,0 +1,12 @@
+QConv2d:
+  sub_arch: LT
+  dim_map:
+    M: width
+    N: height
+    D: wavelength
+QLinear:
+  sub_arch: LT
+  dim_map:
+    M: width
+    N: height
+    D: wavelength

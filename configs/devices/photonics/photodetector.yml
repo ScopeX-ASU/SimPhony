@@ -1,0 +1,37 @@
+photodetector:
+  ACADEMIA_Digital_PD:
+    PDK: ""
+    ref: "https://doi.org/10.1364/ofc.2018.m3f.1"
+    type: Photodetector
+    exp: True
+    cfgs:
+      length: 16 # um
+      width: 20 # um
+      static_power: 0.000025 # mW (25 nW @ -1 V)
+      responsivity: 1.1 # A/W
+      bandwidth: 27 # GHz
+      sensitivity: -27 # dBm
+  ACADEMIA_Analog_PD:
+    PDK: ""
+    ref: "https://doi.org/10.1364/ofc.2018.m3f.1"
+    type: Photodetector
+    exp: True
+    cfgs:
+      length: 180 # um
+      width: 66 # um
+      static_power: 0.000060 # mW (60 nW @ -1 V)
+      responsivity: 1 # A/W
+      bandwidth: 34 # GHz
+      sensitivity: -27 # dBm
+  LT_PD:
+    PDK: ""
+    ref: ""
+    type: Photodetector
+    exp: True
+    cfgs:
+      length: 4 # um
+      width: 10 # um
+      dynamic_power: 1.1 # mW
+      responsivity: 1 # A/W
+      bandwidth: 20 # GHz
+      sensitivity: -25 # dBm

@@ -1,0 +1,40 @@
+LT:
+  v1:
+    memory:
+      HBM:
+        read_energy: 62.4 # pJ/Byte
+        write_energy: 62.4 # pJ/Byte
+        bandwidth: 1024 # GB/s = 1TB/s
+      GLB2:
+        cache_size: 485   # Bytes
+        block_size: 8
+        config_file_name: "GLB2.cfg"
+        output_file_name: "GLB2Report.txt"
+      GLB1:
+        cache_size: 485   # Bytes
+        block_size: 8
+        config_file_name: "GLB1.cfg"
+        output_file_name: "GLB1Report.txt"
+      RF: 
+        cache_size: 485   # Bytes
+        block_size: 8
+        config_file_name: "RF.cfg"
+        output_file_name: "RFReport.txt"
+    tiles: 4
+    cores_per_tile: 2
+    dataflow: "output_stationary"
+    op_type: "MVM"
+    core:
+      DPTC:
+        version: v1
+        file: default
+        
+
+
+      
+
+
+
+
+  
+        

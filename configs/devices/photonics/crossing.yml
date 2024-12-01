@@ -1,0 +1,57 @@
+crossing:
+  ACADEMIA_WG_Crossing:
+    PDK: ""
+    ref: ""
+    type: Crossing
+    exp: True
+    cfgs:
+      length: 100 # um
+      width: 100 # um
+      insertion_loss: 0.25 # dB
+      crosstalk: -45 # dB
+      wavelength: [1460, 1640] # nm
+  ACADEMIA_WG_Crossing_Linear:
+    PDK: ""
+    ref: ""
+    type: Crossing
+    exp: True
+    cfgs:
+      length: 21 # um
+      width: 21 # um
+      insertion_loss: 0.13 # dB
+      crosstalk: -35 #dB
+      wavelength: [1260, 1340] # nm
+  ACADEMIA_WG_Crossing_Trigonometric:
+    PDK: ""
+    ref: ""
+    type: Crossing
+    exp: True
+    cfgs:
+      length: 8 # um
+      width: 8 # um
+      insertion_loss: 0.23 # dB
+      cross_talk: -30 # dB
+      wavelength: [1260, 1340] # nm
+  WG_Crossing_Parabolic: # partially etched parabolic taper
+    PDK: ""
+    ref: "https://doi.org/10.1364/OL.32.002801"
+    type: Crossing
+    exp: True
+    cfgs:
+      length: 6 # um
+      width: 6 # um
+      insertion_loss: 0.16 # dB
+      crosstalk: -40 # dB
+      wavelength: 1550 # nm
+  WG_Crossing_Genetic: # shaped taper designed by genetic algorithm
+    PDK: ""
+    ref: "https://doi.org/10.1364/OL.34.002760"
+    type: Crossing
+    exp: True
+    cfgs:
+      length: 6 # um
+      width: 6 # um
+      insertion_loss: 0.2 # dB
+      crosstalk: -40 # dB
+      wavelength: [1540, 1560] # nm
+      

@@ -1,0 +1,9 @@
+micro_comb:
+  LT_Micro_Comb:
+    PDK: ""
+    ref: ""
+    type: micro_comb
+    exp: True
+    cfgs:
+      width: 1184 # nm
+      length: 1184 # um

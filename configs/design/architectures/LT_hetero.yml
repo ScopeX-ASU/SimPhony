@@ -1,0 +1,6 @@
+TeMPO_hetero:
+  v1:
+    sub_archs:
+      LT:
+        version: v1
+        file: default

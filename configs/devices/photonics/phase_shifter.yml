@@ -1,0 +1,49 @@
+phase_shifter:
+  ACADEMIA_TO_PS:
+    PDK: ""
+    ref: ""
+    type: PhaseShifter
+    exp: True
+    cfgs:
+      length: 100 # um
+      width: 25 # um
+      static_power: 0 # mW
+      insertion_loss: 0.25 # dB
+      P_pi: 30 # mW
+      response_time: 10000 # ns
+  MEMS_PS:
+    PDK: ""
+    ref: "https://www.nature.com/articles/s41378-023-00498-z"
+    type: PhaseShifter
+    exp: True
+    cfgs:
+      length: 100 # um
+      width: 45 # um
+      static_power: 0 # mW
+      insertion_loss: 0.33 # dB
+      P_pi: 0 # nW level
+      response_time: 2000 # ns
+  ITO_PS:
+    PDK: ""
+    ref: "https://www.nature.com/articles/s41378-023-00498-z"
+    type: PhaseShifter
+    exp: True
+    cfgs:
+      length: 50 # um
+      width: 10 # um
+      static_power: 0 # mW
+      insertion_loss: 0.03 # dB
+      P_pi: 15 # mW level
+      response_time: 10000 # ns
+  Customized_PS:
+    PDK: ""
+    ref: ""
+    type: PhaseShifter
+    exp: True
+    cfgs:
+      width: 6.5 # um
+      length: 33 # um
+      static_power: 0 # mW
+      insertion_loss: 0.05 # dB
+      P_pi: 0 # mW level
+      response_time: 0 # ns

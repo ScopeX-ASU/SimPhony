@@ -1,0 +1,18 @@
+TeMPOBlockConv2d:
+  sub_arch: LT
+  dim_map:
+    M: width
+    N: height
+    D: wavelength
+TeMPOBlockLinear:
+  sub_arch: LT
+  dim_map:
+    M: width
+    N: height
+    D: wavelength
+TeMPOBlockMatMul:
+  sub_arch: LT
+  dim_map:
+    M: width
+    N: height
+    D: wavelength

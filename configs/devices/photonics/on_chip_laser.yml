@@ -1,0 +1,23 @@
+on_chip_laser:
+  LT_Laser:
+    PDK: ""
+    ref: ""
+    type: Laser
+    exp: True
+    cfgs:
+      power: 23.5
+      length: 400
+      width: 300
+      wall_plug_eff: 0.2
+
+  Customized_Laser:
+    PDK: ""
+    ref: ""
+    type: Laser
+    exp: True
+    cfgs:
+      power: 23.5
+      length: 400
+      width: 300
+      wall_plug_eff: 0.2
+      insertion_loss: 2 # dB

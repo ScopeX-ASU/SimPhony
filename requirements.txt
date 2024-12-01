@@ -1,0 +1,5 @@
+torch==1.12.1
+networkx==2.8.8
+mmengine==0.7.4
+pyyaml==6.0
+git+https://github.com/JeremieMelo/pyutility.git#egg=pyutils

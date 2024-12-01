@@ -1,0 +1,11 @@
+mmi:
+  Customized_1x10_MMI:
+    PDK: ""
+    ref: ""
+    type: MMI
+    exp: True
+    cfgs:
+      width: 14.1 # nm
+      length: 34.6 # um
+      insertion_loss: 0.199
+      ports_num: 10

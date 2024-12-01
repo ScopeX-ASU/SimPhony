@@ -1,0 +1,14 @@
+large_insertion:
+  Large_Insertion_Test:
+    PDK: ""
+    ref: ""
+    type: LargeInsertion
+    exp: True
+    cfgs:
+      length: 100 # um
+      width: 100 # um
+      insertion_loss: 50 # dB
+      crosstalk: -45 # dB
+      wavelength: [1460, 1640] # nm
+
+      

@@ -1,0 +1,10 @@
+laser_splitter:
+  Customized_Laser_Splitter:
+    PDK: ""
+    ref: ""
+    type: laser_splitter
+    exp: True
+    cfgs:
+      width: 1.3 # um
+      length: 1.8 # um
+      insertion_loss: 0.1

@@ -1,0 +1,11 @@
+waveguide:
+  WG_Single_Strip:
+    PDK: ""
+    ref: ""
+    type: Waveguide
+    exp: True
+    cfgs:
+      mode: single
+      width: 500 # nm
+      type: strip
+      insertion_loss: 0.11 # 0.11 dB/cm

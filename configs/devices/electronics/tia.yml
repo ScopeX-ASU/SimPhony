@@ -1,0 +1,10 @@
+tia:
+  TIA_1:
+    PDK: ""
+    ref: "https://ieeexplore.ieee.org/document/8510668"
+    type: TIA
+    exp: True
+    cfgs:
+      tech: 14 # nm
+      area: 50 # um^2
+      dynamic_power: 3 # mW

@@ -1,0 +1,41 @@
+coupler:
+  ACADEMIA_DC_2x2:
+    PDK: ""
+    ref: ""
+    type: Coupler
+    exp: True
+    cfgs:
+      type: directional_coupler
+      length: 200 # um
+      width: 20 # um
+      insertion_loss: 0.5 # dB
+  Customized_DC_2x2:
+    PDK: ""
+    ref: ""
+    type: Coupler
+    exp: True
+    cfgs:
+      type: directional_coupler
+      length: 31 # um
+      width: 6.5 # um
+      insertion_loss: 0.33 # dB
+  LT_DC_2x2:
+    PDK: ""
+    ref: ""
+    type: Coupler
+    exp: True
+    cfgs:
+      type: directional_coupler
+      length: 5.25 # um
+      width: 2.4 # um
+      insertion_loss: 0.33 # dB
+  Customized_DC_1x1:
+    PDK: ""
+    ref: ""
+    type: Coupler
+    exp: True
+    cfgs:
+      type: grating_coupler
+      length: 5 # um
+      width: 5 # um
+      insertion_loss: 0.15 # dB

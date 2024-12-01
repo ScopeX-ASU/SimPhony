@@ -1,0 +1,24 @@
+Conv2d:
+  type: TeMPOBlockConv2d
+  miniblock: [2, 2, 4, 4]
+  mode: weight
+  in_bit: 8
+  w_bit: 8
+  out_bit: 8
+  photodetect: incoherent
+Linear:
+  type: TeMPOBlockLinear
+  miniblock: [2, 2, 4, 4]
+  mode: weight
+  in_bit: 8
+  w_bit: 8
+  out_bit: 8
+  photodetect: incoherent
+QMatMul:
+  type: TeMPOBlockMatMul
+  miniblock: [2, 2, 4, 4]
+  mode: weight
+  in_bit: 8
+  w_bit: 8
+  out_bit: 8
+  photodetect: incoherent

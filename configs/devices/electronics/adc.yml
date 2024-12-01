@@ -1,0 +1,13 @@
+adc:
+  ADC_SAR_1: # A 10GS/s 8b 25fJ/c-s 2850um2 Two-Step Time-Domain ADC Using Delay-Tracking Pipelined-SAR TDC with 500fs Time Step in 14nm CMOS Technology
+    PDK: ""
+    ref: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9731625"
+    type: ADC
+    exp: True
+    cfgs:
+      tech: 14 # nm
+      type: sar
+      area: 2850 # um^2
+      prec: 8 # bit
+      power: 14.8 # mW
+      sample_rate: 10 # GSPS

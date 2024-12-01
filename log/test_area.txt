@@ -1,0 +1,197 @@
+2024-11-27 18:03:15,938 - simulator.py[line:399] - INFO: 
+============================================================================================
+                                Simphony: ONN Arch Simulator v0.0.1
+                                    Ziang Yin
+                        Jiaqi Gu (https://scopex-asu.github.io)
+================================== Simulation Parameters ===================================
+
+nn_model: CNN
+onn_conversion_cfg: configs/onn_mapping/simple_cnn.yml
+nn_conversion_cfg: configs/nn_mapping/simple_cnn.yml
+onn_model: None
+model2arch_map_cfg: configs/architecture_mapping/simple_cnn.yml
+log_path: log/test_area.txt
+devicelib_root: configs/devices
+device_cfg_files: ['*/*.yml']
+arch_cfg_file: configs/design/architectures/LT_hetero.yml
+arch_version: v1
+input_shape: (2, 3, 32, 32)
+2024-11-27 18:03:15,976 - lsq.py[line:220] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int8 quantization with offset: False
+2024-11-27 18:03:16,567 - lsq.py[line:220] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int8 quantization with offset: False
+2024-11-27 18:03:17,191 - lsq.py[line:220] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int8 quantization with offset: False
+2024-11-27 18:03:18,098 - utils.py[line:216] - INFO: Couldn't find the mapping for layer  (CNN) in the mapping config.
+2024-11-27 18:03:18,098 - utils.py[line:209] - WARNING: Mismatch in miniblock for layer conv1 (TeMPOBlockConv2d): model has [2, 2, 4, 4], arch has [4, 2, 12, 12]
+2024-11-27 18:03:18,098 - utils.py[line:209] - WARNING: Mismatch in w_bit for layer conv1 (TeMPOBlockConv2d): model has 8, arch has 4
+2024-11-27 18:03:18,099 - utils.py[line:209] - WARNING: Mismatch in in_bit for layer conv1 (TeMPOBlockConv2d): model has 8, arch has 4
+2024-11-27 18:03:18,099 - utils.py[line:209] - WARNING: Mismatch in out_bit for layer conv1 (TeMPOBlockConv2d): model has 8, arch has 4
+2024-11-27 18:03:18,099 - utils.py[line:216] - INFO: Couldn't find the mapping for layer conv1.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:03:18,099 - utils.py[line:216] - INFO: Couldn't find the mapping for layer conv1.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:03:18,099 - utils.py[line:216] - INFO: Couldn't find the mapping for layer conv1.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:03:18,099 - utils.py[line:209] - WARNING: Mismatch in miniblock for layer conv2 (TeMPOBlockConv2d): model has [2, 2, 4, 4], arch has [4, 2, 12, 12]
+2024-11-27 18:03:18,099 - utils.py[line:209] - WARNING: Mismatch in w_bit for layer conv2 (TeMPOBlockConv2d): model has 8, arch has 4
+2024-11-27 18:03:18,099 - utils.py[line:209] - WARNING: Mismatch in in_bit for layer conv2 (TeMPOBlockConv2d): model has 8, arch has 4
+2024-11-27 18:03:18,099 - utils.py[line:209] - WARNING: Mismatch in out_bit for layer conv2 (TeMPOBlockConv2d): model has 8, arch has 4
+2024-11-27 18:03:18,099 - utils.py[line:216] - INFO: Couldn't find the mapping for layer conv2.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:03:18,099 - utils.py[line:216] - INFO: Couldn't find the mapping for layer conv2.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:03:18,100 - utils.py[line:216] - INFO: Couldn't find the mapping for layer conv2.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:03:18,100 - utils.py[line:216] - INFO: Couldn't find the mapping for layer pool (AdaptiveAvgPool2d) in the mapping config.
+2024-11-27 18:03:18,100 - utils.py[line:209] - WARNING: Mismatch in miniblock for layer linear (TeMPOBlockLinear): model has [2, 2, 4, 4], arch has [4, 2, 12, 12]
+2024-11-27 18:03:18,100 - utils.py[line:209] - WARNING: Mismatch in w_bit for layer linear (TeMPOBlockLinear): model has 8, arch has 4
+2024-11-27 18:03:18,100 - utils.py[line:209] - WARNING: Mismatch in in_bit for layer linear (TeMPOBlockLinear): model has 8, arch has 4
+2024-11-27 18:03:18,100 - utils.py[line:209] - WARNING: Mismatch in out_bit for layer linear (TeMPOBlockLinear): model has 8, arch has 4
+2024-11-27 18:03:18,100 - utils.py[line:216] - INFO: Couldn't find the mapping for layer linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:03:18,100 - utils.py[line:216] - INFO: Couldn't find the mapping for layer linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:03:18,100 - utils.py[line:216] - INFO: Couldn't find the mapping for layer linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:03:18,100 - utils.py[line:220] - INFO: Layer mapping check completed.
+2024-11-27 18:03:18,101 - lsq.py[line:115] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int8 quantization with offset: True
+2024-11-27 18:03:18,103 - lsq.py[line:115] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int8 quantization with offset: True
+2024-11-27 18:03:18,104 - lsq.py[line:115] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int8 quantization with offset: True
+2024-11-27 18:03:18,105 - lsq.py[line:115] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int8 quantization with offset: True
+2024-11-27 18:03:18,106 - lsq.py[line:115] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int8 quantization with offset: True
+2024-11-27 18:03:18,107 - lsq.py[line:115] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int8 quantization with offset: True
+2024-11-27 18:03:18,109 - simulator.py[line:408] - INFO: 
+================================== Report: Area Cost (Breakdown) (um^2) ===================================
+
+LT:
+  core_mzm_0_i0-LT_MZM:
+    count: 1152
+    area: 5200
+    chip_type: PIC_1
+    width: 20
+    length: 260
+    total_area: 5990400
+  core_dac_0_i1-DAC_2:
+    count: 1152
+    area: 11000
+    chip_type: RF_EIC
+    width: 104.88088481701516
+    length: 104.88088481701516
+    total_area: 12672000
+  core_adc_0_i2-ADC_SAR_1:
+    count: 576
+    area: 2850
+    chip_type: off_chip
+    width: 53.38539126015655
+    length: 53.38539126015655
+    total_area: 1641600
+  core_mrr_rerouter_0_i3-LT_MRR_REROUTER:
+    count: 4608
+    area: 23.04
+    chip_type: off_chip
+    width: 4.8
+    length: 4.8
+    total_area: 106168.31999999999
+  core_on_chip_laser_0_i4-Customized_Laser:
+    count: 6
+    area: 120000
+    chip_type: off_chip
+    width: 300
+    length: 400
+    total_area: 720000
+  core_micro_comb_0_i5-LT_Micro_Comb:
+    count: 6
+    area: 1401856
+    chip_type: RF_EIC
+    width: 1184
+    length: 1184
+    total_area: 8411136
+  core_laser_splitter_0_i6-Customized_Laser_Splitter:
+    count: 176
+    area: 2.3400000000000003
+    chip_type: PIC_2
+    width: 1.3
+    length: 1.8
+    total_area: 411.84000000000003
+  core_tia_0_i8-TIA_1:
+    count: 1152
+    area: 50
+    chip_type: RF_EIC
+    width: 7.0710678118654755
+    length: 7.0710678118654755
+    total_area: 57600
+  core_mzm_0_i9-LT_MZM:
+    count: 288
+    area: 5200
+    chip_type: PIC_2
+    width: 20
+    length: 260
+    total_area: 1497600
+  core_dac_0_i10-DAC_2:
+    count: 288
+    area: 11000
+    chip_type: off_chip
+    width: 104.88088481701516
+    length: 104.88088481701516
+    total_area: 3168000
+  node_phase_shifter_0_i0-MEMS_PS:
+    count: 1152
+    area: 4500
+    chip_type: off_chip
+    width: 45
+    length: 100
+    total_area: 5184000
+  node_coupler_0_i1-LT_DC_2x2:
+    count: 1152
+    area: 12.6
+    chip_type: off_chip
+    width: 2.4
+    length: 5.25
+    total_area: 14515.199999999999
+  node_photodetector_0_i2-LT_PD:
+    count: 1152
+    area: 40
+    chip_type: off_chip
+    width: 10
+    length: 4
+    total_area: 46080
+  node_photodetector_0_i3-LT_PD:
+    count: 1152
+    area: 40
+    chip_type: off_chip
+    width: 10
+    length: 4
+    total_area: 46080
+  node_coupler_0_i4-LT_DC_2x2:
+    count: 1152
+    area: 12.6
+    chip_type: off_chip
+    width: 2.4
+    length: 5.25
+    total_area: 14515.199999999999
+  node_y_branch_0_i5-LT_Y_Branch:
+    count: 1152
+    area: 2.3400000000000003
+    chip_type: off_chip
+    width: 1.3
+    length: 1.8
+    total_area: 2695.6800000000003
+  node:
+    area: 11688.0
+    width: 120
+    length: 97.4
+    count: 1152
+    chip_type: PIC_1
+    total_area: 13464576.0
+
+2024-11-27 18:03:18,110 - simulator.py[line:408] - INFO: 
+================================== Report: Total Area (um^2) ===================================
+
+LT: 66501954.24
+
+2024-11-27 18:03:18,110 - simulator.py[line:408] - INFO: 
+================================== Report: Chip Area (um^2) ===================================
+
+LT:
+  PIC_1:
+    devices: ['core_mzm_0_i0-LT_MZM', 'node']
+    total_area: 19454976.0
+  RF_EIC:
+    devices: ['core_dac_0_i1-DAC_2', 'core_micro_comb_0_i5-LT_Micro_Comb', 'core_tia_0_i8-TIA_1']
+    total_area: 21140736
+  off_chip:
+    devices: ['core_adc_0_i2-ADC_SAR_1', 'core_mrr_rerouter_0_i3-LT_MRR_REROUTER', 'core_on_chip_laser_0_i4-Customized_Laser', 'core_dac_0_i10-DAC_2']
+    total_area: 5635768.32
+  PIC_2:
+    devices: ['core_laser_splitter_0_i6-Customized_Laser_Splitter', 'core_mzm_0_i9-LT_MZM']
+    total_area: 1498011.84
+

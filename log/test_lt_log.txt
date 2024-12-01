@@ -1,0 +1,1420 @@
+2024-11-27 18:41:07,408 - simulator.py[line:399] - INFO: 
+============================================================================================
+                                Simphony: ONN Arch Simulator v0.0.1
+                                    Ziang Yin
+                        Jiaqi Gu (https://scopex-asu.github.io)
+================================== Simulation Parameters ===================================
+
+nn_model: QBertViTBase
+onn_conversion_cfg: None
+nn_conversion_cfg: configs/nn_mapping/simple_cnn.yml
+onn_model: None
+model2arch_map_cfg: configs/architecture_mapping/simple_lt_cnn.yml
+log_path: log/test_lt_log.txt
+devicelib_root: configs/devices
+device_cfg_files: ['*/*.yml']
+arch_cfg_file: configs/design/architectures/LT_hetero.yml
+arch_version: v1
+input_shape: (2, 3, 224, 224)
+2024-11-27 18:41:07,441 - simulator.py[line:134] - WARNING: ONN model not provided
+2024-11-27 18:41:07,442 - utils.py[line:216] - INFO: Couldn't find the mapping for layer  (QBertViTBase) in the mapping config.
+2024-11-27 18:41:07,442 - utils.py[line:216] - INFO: Couldn't find the mapping for layer patch_embed (ConvolutionalEmbedding) in the mapping config.
+2024-11-27 18:41:07,442 - utils.py[line:216] - INFO: Couldn't find the mapping for layer patch_embed.proj (ConvBlock) in the mapping config.
+2024-11-27 18:41:07,442 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer patch_embed.proj.conv(QConv2d)
+2024-11-27 18:41:07,442 - utils.py[line:216] - INFO: Couldn't find the mapping for layer patch_embed.proj.conv.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,442 - utils.py[line:216] - INFO: Couldn't find the mapping for layer patch_embed.proj.conv.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,442 - utils.py[line:216] - INFO: Couldn't find the mapping for layer patch_embed.proj.conv.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,442 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers (ModuleList) in the mapping config.
+2024-11-27 18:41:07,443 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.0 (QTransformerEncoderLayer) in the mapping config.
+2024-11-27 18:41:07,443 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.0.self_attn (QAttention) in the mapping config.
+2024-11-27 18:41:07,443 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.0.self_attn.qkv (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,443 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.0.self_attn.qkv.linear(QLinear)
+2024-11-27 18:41:07,443 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.0.self_attn.qkv.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,443 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.0.self_attn.qkv.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,443 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.0.self_attn.qkv.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,443 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.0.self_attn.proj (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,443 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.0.self_attn.proj.linear(QLinear)
+2024-11-27 18:41:07,443 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.0.self_attn.proj.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,443 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.0.self_attn.proj.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,443 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.0.self_attn.proj.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,443 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.0.self_attn.quantized_matmul (MatMulBlock) in the mapping config.
+2024-11-27 18:41:07,443 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.0.self_attn.quantized_matmul.matmul (QMatMul) in the mapping config.
+2024-11-27 18:41:07,443 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.0.self_attn.quantized_matmul.matmul.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,443 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.0.self_attn.quantized_matmul.matmul.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,444 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.0.self_attn.quantized_matmul.matmul.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,444 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.0.linear1 (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,444 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.0.linear1.linear(QLinear)
+2024-11-27 18:41:07,444 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.0.linear1.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,444 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.0.linear1.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,444 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.0.linear1.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,444 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.0.dropout (Dropout) in the mapping config.
+2024-11-27 18:41:07,444 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.0.linear2 (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,444 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.0.linear2.linear(QLinear)
+2024-11-27 18:41:07,444 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.0.linear2.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,444 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.0.linear2.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,444 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.0.linear2.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,444 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.0.norm1 (LayerNorm) in the mapping config.
+2024-11-27 18:41:07,444 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.0.norm2 (LayerNorm) in the mapping config.
+2024-11-27 18:41:07,444 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.0.activation (ReLU) in the mapping config.
+2024-11-27 18:41:07,444 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.1 (QTransformerEncoderLayer) in the mapping config.
+2024-11-27 18:41:07,445 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.1.self_attn (QAttention) in the mapping config.
+2024-11-27 18:41:07,445 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.1.self_attn.qkv (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,445 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.1.self_attn.qkv.linear(QLinear)
+2024-11-27 18:41:07,445 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.1.self_attn.qkv.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,445 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.1.self_attn.qkv.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,445 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.1.self_attn.qkv.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,445 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.1.self_attn.proj (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,445 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.1.self_attn.proj.linear(QLinear)
+2024-11-27 18:41:07,445 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.1.self_attn.proj.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,445 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.1.self_attn.proj.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,445 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.1.self_attn.proj.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,445 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.1.self_attn.quantized_matmul (MatMulBlock) in the mapping config.
+2024-11-27 18:41:07,445 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.1.self_attn.quantized_matmul.matmul (QMatMul) in the mapping config.
+2024-11-27 18:41:07,445 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.1.self_attn.quantized_matmul.matmul.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,445 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.1.self_attn.quantized_matmul.matmul.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,445 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.1.self_attn.quantized_matmul.matmul.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,446 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.1.linear1 (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,446 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.1.linear1.linear(QLinear)
+2024-11-27 18:41:07,446 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.1.linear1.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,446 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.1.linear1.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,446 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.1.linear1.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,446 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.1.dropout (Dropout) in the mapping config.
+2024-11-27 18:41:07,446 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.1.linear2 (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,446 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.1.linear2.linear(QLinear)
+2024-11-27 18:41:07,446 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.1.linear2.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,446 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.1.linear2.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,446 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.1.linear2.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,446 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.1.norm1 (LayerNorm) in the mapping config.
+2024-11-27 18:41:07,446 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.1.norm2 (LayerNorm) in the mapping config.
+2024-11-27 18:41:07,446 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.1.activation (ReLU) in the mapping config.
+2024-11-27 18:41:07,447 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.2 (QTransformerEncoderLayer) in the mapping config.
+2024-11-27 18:41:07,447 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.2.self_attn (QAttention) in the mapping config.
+2024-11-27 18:41:07,447 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.2.self_attn.qkv (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,447 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.2.self_attn.qkv.linear(QLinear)
+2024-11-27 18:41:07,447 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.2.self_attn.qkv.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,447 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.2.self_attn.qkv.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,447 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.2.self_attn.qkv.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,447 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.2.self_attn.proj (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,447 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.2.self_attn.proj.linear(QLinear)
+2024-11-27 18:41:07,447 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.2.self_attn.proj.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,447 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.2.self_attn.proj.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,447 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.2.self_attn.proj.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,447 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.2.self_attn.quantized_matmul (MatMulBlock) in the mapping config.
+2024-11-27 18:41:07,447 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.2.self_attn.quantized_matmul.matmul (QMatMul) in the mapping config.
+2024-11-27 18:41:07,448 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.2.self_attn.quantized_matmul.matmul.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,448 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.2.self_attn.quantized_matmul.matmul.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,448 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.2.self_attn.quantized_matmul.matmul.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,448 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.2.linear1 (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,448 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.2.linear1.linear(QLinear)
+2024-11-27 18:41:07,448 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.2.linear1.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,448 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.2.linear1.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,448 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.2.linear1.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,448 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.2.dropout (Dropout) in the mapping config.
+2024-11-27 18:41:07,448 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.2.linear2 (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,448 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.2.linear2.linear(QLinear)
+2024-11-27 18:41:07,448 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.2.linear2.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,448 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.2.linear2.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,449 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.2.linear2.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,449 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.2.norm1 (LayerNorm) in the mapping config.
+2024-11-27 18:41:07,449 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.2.norm2 (LayerNorm) in the mapping config.
+2024-11-27 18:41:07,449 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.2.activation (ReLU) in the mapping config.
+2024-11-27 18:41:07,449 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.3 (QTransformerEncoderLayer) in the mapping config.
+2024-11-27 18:41:07,449 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.3.self_attn (QAttention) in the mapping config.
+2024-11-27 18:41:07,449 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.3.self_attn.qkv (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,449 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.3.self_attn.qkv.linear(QLinear)
+2024-11-27 18:41:07,449 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.3.self_attn.qkv.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,449 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.3.self_attn.qkv.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,449 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.3.self_attn.qkv.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,449 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.3.self_attn.proj (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,449 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.3.self_attn.proj.linear(QLinear)
+2024-11-27 18:41:07,449 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.3.self_attn.proj.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,449 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.3.self_attn.proj.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,450 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.3.self_attn.proj.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,450 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.3.self_attn.quantized_matmul (MatMulBlock) in the mapping config.
+2024-11-27 18:41:07,450 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.3.self_attn.quantized_matmul.matmul (QMatMul) in the mapping config.
+2024-11-27 18:41:07,450 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.3.self_attn.quantized_matmul.matmul.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,450 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.3.self_attn.quantized_matmul.matmul.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,450 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.3.self_attn.quantized_matmul.matmul.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,450 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.3.linear1 (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,450 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.3.linear1.linear(QLinear)
+2024-11-27 18:41:07,450 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.3.linear1.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,450 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.3.linear1.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,450 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.3.linear1.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,450 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.3.dropout (Dropout) in the mapping config.
+2024-11-27 18:41:07,450 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.3.linear2 (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,450 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.3.linear2.linear(QLinear)
+2024-11-27 18:41:07,451 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.3.linear2.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,451 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.3.linear2.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,451 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.3.linear2.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,451 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.3.norm1 (LayerNorm) in the mapping config.
+2024-11-27 18:41:07,451 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.3.norm2 (LayerNorm) in the mapping config.
+2024-11-27 18:41:07,451 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.3.activation (ReLU) in the mapping config.
+2024-11-27 18:41:07,451 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.4 (QTransformerEncoderLayer) in the mapping config.
+2024-11-27 18:41:07,451 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.4.self_attn (QAttention) in the mapping config.
+2024-11-27 18:41:07,451 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.4.self_attn.qkv (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,451 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.4.self_attn.qkv.linear(QLinear)
+2024-11-27 18:41:07,451 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.4.self_attn.qkv.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,451 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.4.self_attn.qkv.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,451 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.4.self_attn.qkv.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,451 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.4.self_attn.proj (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,452 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.4.self_attn.proj.linear(QLinear)
+2024-11-27 18:41:07,452 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.4.self_attn.proj.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,452 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.4.self_attn.proj.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,452 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.4.self_attn.proj.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,452 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.4.self_attn.quantized_matmul (MatMulBlock) in the mapping config.
+2024-11-27 18:41:07,452 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.4.self_attn.quantized_matmul.matmul (QMatMul) in the mapping config.
+2024-11-27 18:41:07,452 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.4.self_attn.quantized_matmul.matmul.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,452 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.4.self_attn.quantized_matmul.matmul.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,452 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.4.self_attn.quantized_matmul.matmul.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,452 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.4.linear1 (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,452 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.4.linear1.linear(QLinear)
+2024-11-27 18:41:07,452 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.4.linear1.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,452 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.4.linear1.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,452 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.4.linear1.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,506 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.4.dropout (Dropout) in the mapping config.
+2024-11-27 18:41:07,506 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.4.linear2 (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,506 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.4.linear2.linear(QLinear)
+2024-11-27 18:41:07,506 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.4.linear2.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,506 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.4.linear2.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,506 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.4.linear2.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,506 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.4.norm1 (LayerNorm) in the mapping config.
+2024-11-27 18:41:07,506 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.4.norm2 (LayerNorm) in the mapping config.
+2024-11-27 18:41:07,507 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.4.activation (ReLU) in the mapping config.
+2024-11-27 18:41:07,507 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.5 (QTransformerEncoderLayer) in the mapping config.
+2024-11-27 18:41:07,507 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.5.self_attn (QAttention) in the mapping config.
+2024-11-27 18:41:07,507 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.5.self_attn.qkv (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,507 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.5.self_attn.qkv.linear(QLinear)
+2024-11-27 18:41:07,507 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.5.self_attn.qkv.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,507 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.5.self_attn.qkv.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,507 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.5.self_attn.qkv.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,507 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.5.self_attn.proj (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,507 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.5.self_attn.proj.linear(QLinear)
+2024-11-27 18:41:07,507 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.5.self_attn.proj.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,507 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.5.self_attn.proj.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,507 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.5.self_attn.proj.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,507 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.5.self_attn.quantized_matmul (MatMulBlock) in the mapping config.
+2024-11-27 18:41:07,508 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.5.self_attn.quantized_matmul.matmul (QMatMul) in the mapping config.
+2024-11-27 18:41:07,508 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.5.self_attn.quantized_matmul.matmul.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,508 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.5.self_attn.quantized_matmul.matmul.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,508 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.5.self_attn.quantized_matmul.matmul.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,508 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.5.linear1 (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,508 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.5.linear1.linear(QLinear)
+2024-11-27 18:41:07,508 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.5.linear1.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,508 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.5.linear1.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,508 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.5.linear1.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,508 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.5.dropout (Dropout) in the mapping config.
+2024-11-27 18:41:07,508 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.5.linear2 (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,508 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.5.linear2.linear(QLinear)
+2024-11-27 18:41:07,508 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.5.linear2.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,508 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.5.linear2.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,509 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.5.linear2.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,509 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.5.norm1 (LayerNorm) in the mapping config.
+2024-11-27 18:41:07,509 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.5.norm2 (LayerNorm) in the mapping config.
+2024-11-27 18:41:07,509 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.5.activation (ReLU) in the mapping config.
+2024-11-27 18:41:07,509 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.6 (QTransformerEncoderLayer) in the mapping config.
+2024-11-27 18:41:07,509 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.6.self_attn (QAttention) in the mapping config.
+2024-11-27 18:41:07,509 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.6.self_attn.qkv (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,509 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.6.self_attn.qkv.linear(QLinear)
+2024-11-27 18:41:07,509 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.6.self_attn.qkv.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,509 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.6.self_attn.qkv.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,509 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.6.self_attn.qkv.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,509 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.6.self_attn.proj (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,509 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.6.self_attn.proj.linear(QLinear)
+2024-11-27 18:41:07,509 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.6.self_attn.proj.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,510 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.6.self_attn.proj.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,510 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.6.self_attn.proj.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,510 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.6.self_attn.quantized_matmul (MatMulBlock) in the mapping config.
+2024-11-27 18:41:07,510 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.6.self_attn.quantized_matmul.matmul (QMatMul) in the mapping config.
+2024-11-27 18:41:07,510 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.6.self_attn.quantized_matmul.matmul.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,510 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.6.self_attn.quantized_matmul.matmul.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,510 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.6.self_attn.quantized_matmul.matmul.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,510 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.6.linear1 (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,510 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.6.linear1.linear(QLinear)
+2024-11-27 18:41:07,510 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.6.linear1.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,510 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.6.linear1.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,510 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.6.linear1.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,510 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.6.dropout (Dropout) in the mapping config.
+2024-11-27 18:41:07,510 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.6.linear2 (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,510 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.6.linear2.linear(QLinear)
+2024-11-27 18:41:07,511 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.6.linear2.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,511 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.6.linear2.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,511 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.6.linear2.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,511 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.6.norm1 (LayerNorm) in the mapping config.
+2024-11-27 18:41:07,511 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.6.norm2 (LayerNorm) in the mapping config.
+2024-11-27 18:41:07,511 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.6.activation (ReLU) in the mapping config.
+2024-11-27 18:41:07,511 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.7 (QTransformerEncoderLayer) in the mapping config.
+2024-11-27 18:41:07,511 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.7.self_attn (QAttention) in the mapping config.
+2024-11-27 18:41:07,511 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.7.self_attn.qkv (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,511 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.7.self_attn.qkv.linear(QLinear)
+2024-11-27 18:41:07,511 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.7.self_attn.qkv.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,511 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.7.self_attn.qkv.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,511 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.7.self_attn.qkv.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,511 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.7.self_attn.proj (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,512 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.7.self_attn.proj.linear(QLinear)
+2024-11-27 18:41:07,512 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.7.self_attn.proj.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,512 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.7.self_attn.proj.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,512 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.7.self_attn.proj.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,512 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.7.self_attn.quantized_matmul (MatMulBlock) in the mapping config.
+2024-11-27 18:41:07,512 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.7.self_attn.quantized_matmul.matmul (QMatMul) in the mapping config.
+2024-11-27 18:41:07,512 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.7.self_attn.quantized_matmul.matmul.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,512 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.7.self_attn.quantized_matmul.matmul.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,512 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.7.self_attn.quantized_matmul.matmul.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,512 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.7.linear1 (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,513 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.7.linear1.linear(QLinear)
+2024-11-27 18:41:07,513 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.7.linear1.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,513 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.7.linear1.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,513 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.7.linear1.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,513 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.7.dropout (Dropout) in the mapping config.
+2024-11-27 18:41:07,513 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.7.linear2 (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,513 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.7.linear2.linear(QLinear)
+2024-11-27 18:41:07,513 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.7.linear2.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,513 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.7.linear2.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,513 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.7.linear2.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,513 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.7.norm1 (LayerNorm) in the mapping config.
+2024-11-27 18:41:07,513 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.7.norm2 (LayerNorm) in the mapping config.
+2024-11-27 18:41:07,513 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.7.activation (ReLU) in the mapping config.
+2024-11-27 18:41:07,513 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.8 (QTransformerEncoderLayer) in the mapping config.
+2024-11-27 18:41:07,514 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.8.self_attn (QAttention) in the mapping config.
+2024-11-27 18:41:07,514 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.8.self_attn.qkv (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,514 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.8.self_attn.qkv.linear(QLinear)
+2024-11-27 18:41:07,514 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.8.self_attn.qkv.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,514 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.8.self_attn.qkv.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,514 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.8.self_attn.qkv.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,514 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.8.self_attn.proj (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,514 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.8.self_attn.proj.linear(QLinear)
+2024-11-27 18:41:07,514 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.8.self_attn.proj.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,514 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.8.self_attn.proj.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,514 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.8.self_attn.proj.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,514 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.8.self_attn.quantized_matmul (MatMulBlock) in the mapping config.
+2024-11-27 18:41:07,514 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.8.self_attn.quantized_matmul.matmul (QMatMul) in the mapping config.
+2024-11-27 18:41:07,514 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.8.self_attn.quantized_matmul.matmul.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,515 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.8.self_attn.quantized_matmul.matmul.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,515 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.8.self_attn.quantized_matmul.matmul.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,515 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.8.linear1 (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,551 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.8.linear1.linear(QLinear)
+2024-11-27 18:41:07,551 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.8.linear1.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,551 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.8.linear1.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,551 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.8.linear1.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,551 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.8.dropout (Dropout) in the mapping config.
+2024-11-27 18:41:07,551 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.8.linear2 (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,551 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.8.linear2.linear(QLinear)
+2024-11-27 18:41:07,551 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.8.linear2.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,551 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.8.linear2.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,551 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.8.linear2.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,551 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.8.norm1 (LayerNorm) in the mapping config.
+2024-11-27 18:41:07,551 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.8.norm2 (LayerNorm) in the mapping config.
+2024-11-27 18:41:07,551 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.8.activation (ReLU) in the mapping config.
+2024-11-27 18:41:07,552 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.9 (QTransformerEncoderLayer) in the mapping config.
+2024-11-27 18:41:07,552 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.9.self_attn (QAttention) in the mapping config.
+2024-11-27 18:41:07,552 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.9.self_attn.qkv (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,552 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.9.self_attn.qkv.linear(QLinear)
+2024-11-27 18:41:07,552 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.9.self_attn.qkv.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,552 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.9.self_attn.qkv.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,552 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.9.self_attn.qkv.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,552 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.9.self_attn.proj (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,552 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.9.self_attn.proj.linear(QLinear)
+2024-11-27 18:41:07,552 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.9.self_attn.proj.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,552 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.9.self_attn.proj.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,552 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.9.self_attn.proj.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,552 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.9.self_attn.quantized_matmul (MatMulBlock) in the mapping config.
+2024-11-27 18:41:07,553 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.9.self_attn.quantized_matmul.matmul (QMatMul) in the mapping config.
+2024-11-27 18:41:07,553 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.9.self_attn.quantized_matmul.matmul.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,553 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.9.self_attn.quantized_matmul.matmul.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,553 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.9.self_attn.quantized_matmul.matmul.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,553 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.9.linear1 (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,553 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.9.linear1.linear(QLinear)
+2024-11-27 18:41:07,553 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.9.linear1.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,553 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.9.linear1.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,553 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.9.linear1.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,553 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.9.dropout (Dropout) in the mapping config.
+2024-11-27 18:41:07,553 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.9.linear2 (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,553 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.9.linear2.linear(QLinear)
+2024-11-27 18:41:07,553 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.9.linear2.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,553 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.9.linear2.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,554 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.9.linear2.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,554 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.9.norm1 (LayerNorm) in the mapping config.
+2024-11-27 18:41:07,554 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.9.norm2 (LayerNorm) in the mapping config.
+2024-11-27 18:41:07,554 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.9.activation (ReLU) in the mapping config.
+2024-11-27 18:41:07,554 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.10 (QTransformerEncoderLayer) in the mapping config.
+2024-11-27 18:41:07,554 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.10.self_attn (QAttention) in the mapping config.
+2024-11-27 18:41:07,554 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.10.self_attn.qkv (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,554 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.10.self_attn.qkv.linear(QLinear)
+2024-11-27 18:41:07,554 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.10.self_attn.qkv.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,554 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.10.self_attn.qkv.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,554 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.10.self_attn.qkv.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,554 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.10.self_attn.proj (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,554 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.10.self_attn.proj.linear(QLinear)
+2024-11-27 18:41:07,554 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.10.self_attn.proj.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,554 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.10.self_attn.proj.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,555 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.10.self_attn.proj.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,555 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.10.self_attn.quantized_matmul (MatMulBlock) in the mapping config.
+2024-11-27 18:41:07,555 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.10.self_attn.quantized_matmul.matmul (QMatMul) in the mapping config.
+2024-11-27 18:41:07,555 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.10.self_attn.quantized_matmul.matmul.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,555 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.10.self_attn.quantized_matmul.matmul.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,555 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.10.self_attn.quantized_matmul.matmul.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,555 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.10.linear1 (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,555 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.10.linear1.linear(QLinear)
+2024-11-27 18:41:07,555 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.10.linear1.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,555 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.10.linear1.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,555 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.10.linear1.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,555 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.10.dropout (Dropout) in the mapping config.
+2024-11-27 18:41:07,555 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.10.linear2 (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,555 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.10.linear2.linear(QLinear)
+2024-11-27 18:41:07,556 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.10.linear2.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,556 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.10.linear2.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,556 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.10.linear2.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,556 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.10.norm1 (LayerNorm) in the mapping config.
+2024-11-27 18:41:07,556 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.10.norm2 (LayerNorm) in the mapping config.
+2024-11-27 18:41:07,556 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.10.activation (ReLU) in the mapping config.
+2024-11-27 18:41:07,556 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.11 (QTransformerEncoderLayer) in the mapping config.
+2024-11-27 18:41:07,556 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.11.self_attn (QAttention) in the mapping config.
+2024-11-27 18:41:07,556 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.11.self_attn.qkv (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,556 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.11.self_attn.qkv.linear(QLinear)
+2024-11-27 18:41:07,556 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.11.self_attn.qkv.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,556 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.11.self_attn.qkv.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,556 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.11.self_attn.qkv.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,556 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.11.self_attn.proj (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,556 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.11.self_attn.proj.linear(QLinear)
+2024-11-27 18:41:07,557 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.11.self_attn.proj.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,557 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.11.self_attn.proj.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,557 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.11.self_attn.proj.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,557 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.11.self_attn.quantized_matmul (MatMulBlock) in the mapping config.
+2024-11-27 18:41:07,557 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.11.self_attn.quantized_matmul.matmul (QMatMul) in the mapping config.
+2024-11-27 18:41:07,557 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.11.self_attn.quantized_matmul.matmul.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,557 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.11.self_attn.quantized_matmul.matmul.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,557 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.11.self_attn.quantized_matmul.matmul.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,557 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.11.linear1 (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,558 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.11.linear1.linear(QLinear)
+2024-11-27 18:41:07,558 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.11.linear1.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,558 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.11.linear1.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,558 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.11.linear1.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,558 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.11.dropout (Dropout) in the mapping config.
+2024-11-27 18:41:07,558 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.11.linear2 (LinearBlock) in the mapping config.
+2024-11-27 18:41:07,558 - utils.py[line:196] - WARNING: Attribute miniblock not found in layer layers.11.linear2.linear(QLinear)
+2024-11-27 18:41:07,558 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.11.linear2.linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,558 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.11.linear2.linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,558 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.11.linear2.linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:41:07,558 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.11.norm1 (LayerNorm) in the mapping config.
+2024-11-27 18:41:07,559 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.11.norm2 (LayerNorm) in the mapping config.
+2024-11-27 18:41:07,559 - utils.py[line:216] - INFO: Couldn't find the mapping for layer layers.11.activation (ReLU) in the mapping config.
+2024-11-27 18:41:07,559 - utils.py[line:216] - INFO: Couldn't find the mapping for layer norm (LayerNorm) in the mapping config.
+2024-11-27 18:41:07,559 - utils.py[line:220] - INFO: Layer mapping check completed.
+2024-11-27 18:41:07,577 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,608 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,694 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,696 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,697 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,732 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,733 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,738 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,738 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,745 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,746 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,747 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,748 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,749 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,749 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,750 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,751 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,751 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,752 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,753 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,753 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,754 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,755 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,755 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,757 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,758 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,758 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,759 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,760 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,760 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,761 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,761 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,762 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,763 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,763 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,764 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,765 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,765 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,766 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,767 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,768 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,769 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,769 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,770 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,770 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,771 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,772 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,772 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,773 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,774 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,774 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,775 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,776 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,776 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,778 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,778 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,779 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,780 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,780 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,781 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,781 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,782 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,783 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,783 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,784 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,785 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,785 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,786 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,787 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,788 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,789 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,789 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,790 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,791 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,791 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,792 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,792 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,793 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,794 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,794 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,795 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,796 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,796 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,797 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,798 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,799 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,800 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,800 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,801 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,801 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,802 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,803 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,803 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,804 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,805 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,805 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,806 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,807 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,807 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,809 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,809 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,810 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,811 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,811 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,812 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,812 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,813 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,814 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,814 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,815 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,816 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,816 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,817 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,818 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,819 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,820 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,820 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,821 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,822 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,822 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,823 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,823 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,824 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,825 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,825 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,826 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,827 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,827 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,828 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,829 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,830 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,831 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,831 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,832 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,832 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,833 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,834 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,834 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,835 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,836 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,836 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,837 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,838 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,838 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,840 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,840 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,841 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,842 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,842 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,843 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,843 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,844 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,845 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,845 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,846 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,847 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,847 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,848 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,848 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,850 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,851 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,851 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,852 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,852 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,853 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,854 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,854 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,855 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,856 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,856 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,857 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,858 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,858 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,859 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,860 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,861 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,861 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,862 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,863 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,863 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,864 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,865 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
+2024-11-27 18:41:07,865 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
+2024-11-27 18:41:07,870 - simulator.py[line:408] - INFO: 
+================================== Report: Partition Cycles ===================================
+
+LT:
+  patch_embed.proj.conv: (16, 64, 17, 768, 768, 392, 1, 1)
+  layers.0.self_attn.qkv.linear: (48, 64, 17, 2304, 768, 394, 1, 1)
+  layers.0.self_attn.proj.linear: (16, 64, 17, 768, 768, 394, 1, 1)
+  layers.0.linear1.linear: (64, 64, 17, 3072, 768, 394, 1, 1)
+  layers.0.linear2.linear: (16, 256, 17, 768, 3072, 394, 1, 1)
+  layers.1.self_attn.qkv.linear: (48, 64, 17, 2304, 768, 394, 1, 1)
+  layers.1.self_attn.proj.linear: (16, 64, 17, 768, 768, 394, 1, 1)
+  layers.1.linear1.linear: (64, 64, 17, 3072, 768, 394, 1, 1)
+  layers.1.linear2.linear: (16, 256, 17, 768, 3072, 394, 1, 1)
+  layers.2.self_attn.qkv.linear: (48, 64, 17, 2304, 768, 394, 1, 1)
+  layers.2.self_attn.proj.linear: (16, 64, 17, 768, 768, 394, 1, 1)
+  layers.2.linear1.linear: (64, 64, 17, 3072, 768, 394, 1, 1)
+  layers.2.linear2.linear: (16, 256, 17, 768, 3072, 394, 1, 1)
+  layers.3.self_attn.qkv.linear: (48, 64, 17, 2304, 768, 394, 1, 1)
+  layers.3.self_attn.proj.linear: (16, 64, 17, 768, 768, 394, 1, 1)
+  layers.3.linear1.linear: (64, 64, 17, 3072, 768, 394, 1, 1)
+  layers.3.linear2.linear: (16, 256, 17, 768, 3072, 394, 1, 1)
+  layers.4.self_attn.qkv.linear: (48, 64, 17, 2304, 768, 394, 1, 1)
+  layers.4.self_attn.proj.linear: (16, 64, 17, 768, 768, 394, 1, 1)
+  layers.4.linear1.linear: (64, 64, 17, 3072, 768, 394, 1, 1)
+  layers.4.linear2.linear: (16, 256, 17, 768, 3072, 394, 1, 1)
+  layers.5.self_attn.qkv.linear: (48, 64, 17, 2304, 768, 394, 1, 1)
+  layers.5.self_attn.proj.linear: (16, 64, 17, 768, 768, 394, 1, 1)
+  layers.5.linear1.linear: (64, 64, 17, 3072, 768, 394, 1, 1)
+  layers.5.linear2.linear: (16, 256, 17, 768, 3072, 394, 1, 1)
+  layers.6.self_attn.qkv.linear: (48, 64, 17, 2304, 768, 394, 1, 1)
+  layers.6.self_attn.proj.linear: (16, 64, 17, 768, 768, 394, 1, 1)
+  layers.6.linear1.linear: (64, 64, 17, 3072, 768, 394, 1, 1)
+  layers.6.linear2.linear: (16, 256, 17, 768, 3072, 394, 1, 1)
+  layers.7.self_attn.qkv.linear: (48, 64, 17, 2304, 768, 394, 1, 1)
+  layers.7.self_attn.proj.linear: (16, 64, 17, 768, 768, 394, 1, 1)
+  layers.7.linear1.linear: (64, 64, 17, 3072, 768, 394, 1, 1)
+  layers.7.linear2.linear: (16, 256, 17, 768, 3072, 394, 1, 1)
+  layers.8.self_attn.qkv.linear: (48, 64, 17, 2304, 768, 394, 1, 1)
+  layers.8.self_attn.proj.linear: (16, 64, 17, 768, 768, 394, 1, 1)
+  layers.8.linear1.linear: (64, 64, 17, 3072, 768, 394, 1, 1)
+  layers.8.linear2.linear: (16, 256, 17, 768, 3072, 394, 1, 1)
+  layers.9.self_attn.qkv.linear: (48, 64, 17, 2304, 768, 394, 1, 1)
+  layers.9.self_attn.proj.linear: (16, 64, 17, 768, 768, 394, 1, 1)
+  layers.9.linear1.linear: (64, 64, 17, 3072, 768, 394, 1, 1)
+  layers.9.linear2.linear: (16, 256, 17, 768, 3072, 394, 1, 1)
+  layers.10.self_attn.qkv.linear: (48, 64, 17, 2304, 768, 394, 1, 1)
+  layers.10.self_attn.proj.linear: (16, 64, 17, 768, 768, 394, 1, 1)
+  layers.10.linear1.linear: (64, 64, 17, 3072, 768, 394, 1, 1)
+  layers.10.linear2.linear: (16, 256, 17, 768, 3072, 394, 1, 1)
+  layers.11.self_attn.qkv.linear: (48, 64, 17, 2304, 768, 394, 1, 1)
+  layers.11.self_attn.proj.linear: (16, 64, 17, 768, 768, 394, 1, 1)
+  layers.11.linear1.linear: (64, 64, 17, 3072, 768, 394, 1, 1)
+  layers.11.linear2.linear: (16, 256, 17, 768, 3072, 394, 1, 1)
+
+2024-11-27 18:41:07,871 - simulator.py[line:408] - INFO: 
+================================== Report: Insertion Loss (Breakdown) ===================================
+
+LT:
+  node_path: ['i5', 'i0', 'i1', 'i2']
+  node_insertion_loss: 0.76
+  core_path: ['i4', 'i5', 'i6_0', 'i6_1', 'i6_2', 'i6_3', 'i3_0', 'i3_1', 'i0', 'i7']
+  core_insertion_loss: 6.220000000000001
+
+2024-11-27 18:41:08,011 - simulator.py[line:408] - INFO: 
+================================== Report: Energy Cost (Breakdown) (pJ) ===================================
+
+LT:
+  core_mzm_0_i0-LT_MZM:
+    count: 1152
+    static_power: 0
+    dynamic_power: 2.25
+    chip_type: PIC_1
+    tuning_cycles: 1
+    static_energy: 0.0
+    dynamic_energy: 0.45
+    total_dynamic_energy: 1308524543.9999998
+    total_static_energy: 0.0
+    total_energy: 1308524543.9999998
+  core_dac_0_i1-DAC_2:
+    count: 1152
+    static_power: 0
+    dynamic_power: 2.0089285714285716
+    chip_type: RF_EIC
+    tuning_cycles: 1
+    static_energy: 0.0
+    dynamic_energy: 0.4017857142857143
+    total_dynamic_energy: 1168325485.7142856
+    total_static_energy: 0.0
+    total_energy: 1168325485.7142856
+  core_adc_0_i2-ADC_SAR_1:
+    count: 576
+    static_power: 0
+    dynamic_power: 3.7
+    chip_type: off_chip
+    tuning_cycles: 1
+    static_energy: 0.0
+    dynamic_energy: 0.74
+    total_dynamic_energy: 358632652.79999995
+    total_static_energy: 0.0
+    total_energy: 358632652.79999995
+  core_mrr_rerouter_0_i3-LT_MRR_REROUTER:
+    count: 4608
+    static_power: 0.275
+    dynamic_power: 0
+    chip_type: off_chip
+    tuning_cycles: 1
+    static_energy: 0.05500000000000001
+    dynamic_energy: 0.0
+    total_dynamic_energy: 0.0
+    total_static_energy: 647237099.5200001
+    total_energy: 647237099.5200001
+  core_on_chip_laser_0_i4-Customized_Laser:
+    count: 6
+    static_power: 1.1771924757285903
+    dynamic_power: 0
+    chip_type: off_chip
+    tuning_cycles: 1
+    static_energy: 0.23543849514571807
+    dynamic_energy: 0.0
+    total_dynamic_energy: 0.0
+    total_static_energy: 3607588.274466574
+    total_energy: 3607588.274466574
+  core_micro_comb_0_i5-LT_Micro_Comb:
+    count: 6
+    static_power: 0
+    dynamic_power: 0
+    chip_type: RF_EIC
+    tuning_cycles: 1
+    static_energy: 0.0
+    dynamic_energy: 0.0
+    total_dynamic_energy: 0.0
+    total_static_energy: 0.0
+    total_energy: 0.0
+  core_laser_splitter_0_i6-Customized_Laser_Splitter:
+    count: 176
+    static_power: 0
+    dynamic_power: 0
+    chip_type: PIC_2
+    tuning_cycles: 1
+    static_energy: 0.0
+    dynamic_energy: 0.0
+    total_dynamic_energy: 0.0
+    total_static_energy: 0.0
+    total_energy: 0.0
+  core_tia_0_i8-TIA_1:
+    count: 1152
+    static_power: 0
+    dynamic_power: 3
+    chip_type: RF_EIC
+    tuning_cycles: 1
+    static_energy: 0.0
+    dynamic_energy: 0.6
+    total_dynamic_energy: 581566464.0000001
+    total_static_energy: 0.0
+    total_energy: 581566464.0000001
+  core_mzm_0_i9-LT_MZM:
+    count: 288
+    static_power: 0
+    dynamic_power: 2.25
+    chip_type: PIC_2
+    tuning_cycles: 1
+    static_energy: 0.0
+    dynamic_energy: 0.45
+    total_dynamic_energy: 327131135.99999994
+    total_static_energy: 0.0
+    total_energy: 327131135.99999994
+  core_dac_0_i10-DAC_2:
+    count: 288
+    static_power: 0
+    dynamic_power: 2.0089285714285716
+    chip_type: off_chip
+    tuning_cycles: 1
+    static_energy: 0.0
+    dynamic_energy: 0.4017857142857143
+    total_dynamic_energy: 292081371.4285714
+    total_static_energy: 0.0
+    total_energy: 292081371.4285714
+  node_phase_shifter_0_i0-MEMS_PS:
+    count: 1152
+    static_power: 0
+    dynamic_power: 0
+    chip_type: off_chip
+    tuning_cycles: 10000
+    static_energy: 0.0
+    dynamic_energy: 0.0
+    total_dynamic_energy: 0.0
+    total_static_energy: 0.0
+    total_energy: 0.0
+  node_coupler_0_i1-LT_DC_2x2:
+    count: 1152
+    static_power: 0
+    dynamic_power: 0
+    chip_type: off_chip
+    tuning_cycles: 1
+    static_energy: 0.0
+    dynamic_energy: 0.0
+    total_dynamic_energy: 0.0
+    total_static_energy: 0.0
+    total_energy: 0.0
+  node_photodetector_0_i2-LT_PD:
+    count: 1152
+    static_power: 0
+    dynamic_power: 1.1
+    chip_type: off_chip
+    tuning_cycles: 1
+    static_energy: 0.0
+    dynamic_energy: 0.22000000000000003
+    total_dynamic_energy: 639723110.3999999
+    total_static_energy: 0.0
+    total_energy: 639723110.3999999
+  node_photodetector_0_i3-LT_PD:
+    count: 1152
+    static_power: 0
+    dynamic_power: 1.1
+    chip_type: off_chip
+    tuning_cycles: 1
+    static_energy: 0.0
+    dynamic_energy: 0.22000000000000003
+    total_dynamic_energy: 639723110.3999999
+    total_static_energy: 0.0
+    total_energy: 639723110.3999999
+  node_coupler_0_i4-LT_DC_2x2:
+    count: 1152
+    static_power: 0
+    dynamic_power: 0
+    chip_type: off_chip
+    tuning_cycles: 1
+    static_energy: 0.0
+    dynamic_energy: 0.0
+    total_dynamic_energy: 0.0
+    total_static_energy: 0.0
+    total_energy: 0.0
+  node_y_branch_0_i5-LT_Y_Branch:
+    count: 1152
+    static_power: 0
+    dynamic_power: 0
+    chip_type: off_chip
+    tuning_cycles: 1
+    static_energy: 0.0
+    dynamic_energy: 0.0
+    total_dynamic_energy: 0.0
+    total_static_energy: 0.0
+    total_energy: 0.0
+
+2024-11-27 18:41:08,011 - simulator.py[line:408] - INFO: 
+================================== Report: Total Energy (pJ) ===================================
+
+LT: 5966552562.537322
+
+2024-11-27 18:41:08,011 - simulator.py[line:408] - INFO: 
+================================== Report: Final Computation Latency (s) ===================================
+
+LT:
+  total_tuning_latency: 0.00504832
+  total_static_latency: 0.005107616
+
+2024-11-27 18:41:08,011 - simulator.py[line:408] - INFO: 
+================================== Report: Chip Energy (pJ) ===================================
+
+LT:
+  PIC_1:
+    devices: ['core_mzm_0_i0-LT_MZM']
+    total_dynamic_energy: 1308524543.9999998
+    total_static_energy: 0.0
+  RF_EIC:
+    devices: ['core_dac_0_i1-DAC_2', 'core_micro_comb_0_i5-LT_Micro_Comb', 'core_tia_0_i8-TIA_1']
+    total_dynamic_energy: 1749891949.7142859
+    total_static_energy: 0.0
+  off_chip:
+    devices: ['core_adc_0_i2-ADC_SAR_1', 'core_mrr_rerouter_0_i3-LT_MRR_REROUTER', 'core_on_chip_laser_0_i4-Customized_Laser', 'core_dac_0_i10-DAC_2', 'node_phase_shifter_0_i0-MEMS_PS', 'node_coupler_0_i1-LT_DC_2x2', 'node_photodetector_0_i2-LT_PD', 'node_photodetector_0_i3-LT_PD', 'node_coupler_0_i4-LT_DC_2x2', 'node_y_branch_0_i5-LT_Y_Branch']
+    total_dynamic_energy: 1930160245.0285711
+    total_static_energy: 650844687.7944667
+  PIC_2:
+    devices: ['core_laser_splitter_0_i6-Customized_Laser_Splitter', 'core_mzm_0_i9-LT_MZM']
+    total_dynamic_energy: 327131135.99999994
+    total_static_energy: 0.0
+
+2024-11-27 18:41:08,012 - simulator.py[line:408] - INFO: 
+================================== Report: Area Cost (Breakdown) (um^2) ===================================
+
+LT:
+  core_mzm_0_i0-LT_MZM:
+    count: 1152
+    area: 5200
+    chip_type: PIC_1
+    width: 20
+    length: 260
+    total_area: 5990400
+  core_dac_0_i1-DAC_2:
+    count: 1152
+    area: 11000
+    chip_type: RF_EIC
+    width: 104.88088481701516
+    length: 104.88088481701516
+    total_area: 12672000
+  core_adc_0_i2-ADC_SAR_1:
+    count: 576
+    area: 2850
+    chip_type: off_chip
+    width: 53.38539126015655
+    length: 53.38539126015655
+    total_area: 1641600
+  core_mrr_rerouter_0_i3-LT_MRR_REROUTER:
+    count: 4608
+    area: 23.04
+    chip_type: off_chip
+    width: 4.8
+    length: 4.8
+    total_area: 106168.31999999999
+  core_on_chip_laser_0_i4-Customized_Laser:
+    count: 6
+    area: 120000
+    chip_type: off_chip
+    width: 300
+    length: 400
+    total_area: 720000
+  core_micro_comb_0_i5-LT_Micro_Comb:
+    count: 6
+    area: 1401856
+    chip_type: RF_EIC
+    width: 1184
+    length: 1184
+    total_area: 8411136
+  core_laser_splitter_0_i6-Customized_Laser_Splitter:
+    count: 176
+    area: 2.3400000000000003
+    chip_type: PIC_2
+    width: 1.3
+    length: 1.8
+    total_area: 411.84000000000003
+  core_tia_0_i8-TIA_1:
+    count: 1152
+    area: 50
+    chip_type: RF_EIC
+    width: 7.0710678118654755
+    length: 7.0710678118654755
+    total_area: 57600
+  core_mzm_0_i9-LT_MZM:
+    count: 288
+    area: 5200
+    chip_type: PIC_2
+    width: 20
+    length: 260
+    total_area: 1497600
+  core_dac_0_i10-DAC_2:
+    count: 288
+    area: 11000
+    chip_type: off_chip
+    width: 104.88088481701516
+    length: 104.88088481701516
+    total_area: 3168000
+  node_phase_shifter_0_i0-MEMS_PS:
+    count: 1152
+    area: 4500
+    chip_type: off_chip
+    width: 45
+    length: 100
+    total_area: 5184000
+  node_coupler_0_i1-LT_DC_2x2:
+    count: 1152
+    area: 12.6
+    chip_type: off_chip
+    width: 2.4
+    length: 5.25
+    total_area: 14515.199999999999
+  node_photodetector_0_i2-LT_PD:
+    count: 1152
+    area: 40
+    chip_type: off_chip
+    width: 10
+    length: 4
+    total_area: 46080
+  node_photodetector_0_i3-LT_PD:
+    count: 1152
+    area: 40
+    chip_type: off_chip
+    width: 10
+    length: 4
+    total_area: 46080
+  node_coupler_0_i4-LT_DC_2x2:
+    count: 1152
+    area: 12.6
+    chip_type: off_chip
+    width: 2.4
+    length: 5.25
+    total_area: 14515.199999999999
+  node_y_branch_0_i5-LT_Y_Branch:
+    count: 1152
+    area: 2.3400000000000003
+    chip_type: off_chip
+    width: 1.3
+    length: 1.8
+    total_area: 2695.6800000000003
+  node:
+    area: 11688.0
+    width: 120
+    length: 97.4
+    count: 1152
+    chip_type: PIC_1
+    total_area: 13464576.0
+
+2024-11-27 18:41:08,012 - simulator.py[line:408] - INFO: 
+================================== Report: Total Area (um^2) ===================================
+
+LT: 66501954.24
+
+2024-11-27 18:41:08,012 - simulator.py[line:408] - INFO: 
+================================== Report: Chip Area (um^2) ===================================
+
+LT:
+  PIC_1:
+    devices: ['core_mzm_0_i0-LT_MZM', 'node']
+    total_area: 19454976.0
+  RF_EIC:
+    devices: ['core_dac_0_i1-DAC_2', 'core_micro_comb_0_i5-LT_Micro_Comb', 'core_tia_0_i8-TIA_1']
+    total_area: 21140736
+  off_chip:
+    devices: ['core_adc_0_i2-ADC_SAR_1', 'core_mrr_rerouter_0_i3-LT_MRR_REROUTER', 'core_on_chip_laser_0_i4-Customized_Laser', 'core_dac_0_i10-DAC_2']
+    total_area: 5635768.32
+  PIC_2:
+    devices: ['core_laser_splitter_0_i6-Customized_Laser_Splitter', 'core_mzm_0_i9-LT_MZM']
+    total_area: 1498011.84
+
+2024-11-27 18:41:08,013 - simulator.py[line:408] - INFO: 
+================================== Report: Memory Latency (s) ===================================
+
+LT:
+  patch_embed.proj.conv:
+    GLB2_input_latency: 4.290556032e-14
+    GLB2_output_latency: 1.4499120384e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.0.self_attn.qkv.linear:
+    GLB2_input_latency: 9.9792415296e-14
+    GLB2_output_latency: 4.3719286464e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.0.self_attn.proj.linear:
+    GLB2_input_latency: 4.2979535424e-14
+    GLB2_output_latency: 1.4573095488e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.0.linear1.linear:
+    GLB2_input_latency: 1.28198855232e-13
+    GLB2_output_latency: 5.8292381952e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.0.linear2.linear:
+    GLB2_input_latency: 1.71918141696e-13
+    GLB2_output_latency: 1.4573095488e-14
+    GLB1_input_latency: 1.0652414976e-14
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.1.self_attn.qkv.linear:
+    GLB2_input_latency: 9.9792415296e-14
+    GLB2_output_latency: 4.3719286464e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.1.self_attn.proj.linear:
+    GLB2_input_latency: 4.2979535424e-14
+    GLB2_output_latency: 1.4573095488e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.1.linear1.linear:
+    GLB2_input_latency: 1.28198855232e-13
+    GLB2_output_latency: 5.8292381952e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.1.linear2.linear:
+    GLB2_input_latency: 1.71918141696e-13
+    GLB2_output_latency: 1.4573095488e-14
+    GLB1_input_latency: 1.0652414976e-14
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.2.self_attn.qkv.linear:
+    GLB2_input_latency: 9.9792415296e-14
+    GLB2_output_latency: 4.3719286464e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.2.self_attn.proj.linear:
+    GLB2_input_latency: 4.2979535424e-14
+    GLB2_output_latency: 1.4573095488e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.2.linear1.linear:
+    GLB2_input_latency: 1.28198855232e-13
+    GLB2_output_latency: 5.8292381952e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.2.linear2.linear:
+    GLB2_input_latency: 1.71918141696e-13
+    GLB2_output_latency: 1.4573095488e-14
+    GLB1_input_latency: 1.0652414976e-14
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.3.self_attn.qkv.linear:
+    GLB2_input_latency: 9.9792415296e-14
+    GLB2_output_latency: 4.3719286464e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.3.self_attn.proj.linear:
+    GLB2_input_latency: 4.2979535424e-14
+    GLB2_output_latency: 1.4573095488e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.3.linear1.linear:
+    GLB2_input_latency: 1.28198855232e-13
+    GLB2_output_latency: 5.8292381952e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.3.linear2.linear:
+    GLB2_input_latency: 1.71918141696e-13
+    GLB2_output_latency: 1.4573095488e-14
+    GLB1_input_latency: 1.0652414976e-14
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.4.self_attn.qkv.linear:
+    GLB2_input_latency: 9.9792415296e-14
+    GLB2_output_latency: 4.3719286464e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.4.self_attn.proj.linear:
+    GLB2_input_latency: 4.2979535424e-14
+    GLB2_output_latency: 1.4573095488e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.4.linear1.linear:
+    GLB2_input_latency: 1.28198855232e-13
+    GLB2_output_latency: 5.8292381952e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.4.linear2.linear:
+    GLB2_input_latency: 1.71918141696e-13
+    GLB2_output_latency: 1.4573095488e-14
+    GLB1_input_latency: 1.0652414976e-14
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.5.self_attn.qkv.linear:
+    GLB2_input_latency: 9.9792415296e-14
+    GLB2_output_latency: 4.3719286464e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.5.self_attn.proj.linear:
+    GLB2_input_latency: 4.2979535424e-14
+    GLB2_output_latency: 1.4573095488e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.5.linear1.linear:
+    GLB2_input_latency: 1.28198855232e-13
+    GLB2_output_latency: 5.8292381952e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.5.linear2.linear:
+    GLB2_input_latency: 1.71918141696e-13
+    GLB2_output_latency: 1.4573095488e-14
+    GLB1_input_latency: 1.0652414976e-14
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.6.self_attn.qkv.linear:
+    GLB2_input_latency: 9.9792415296e-14
+    GLB2_output_latency: 4.3719286464e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.6.self_attn.proj.linear:
+    GLB2_input_latency: 4.2979535424e-14
+    GLB2_output_latency: 1.4573095488e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.6.linear1.linear:
+    GLB2_input_latency: 1.28198855232e-13
+    GLB2_output_latency: 5.8292381952e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.6.linear2.linear:
+    GLB2_input_latency: 1.71918141696e-13
+    GLB2_output_latency: 1.4573095488e-14
+    GLB1_input_latency: 1.0652414976e-14
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.7.self_attn.qkv.linear:
+    GLB2_input_latency: 9.9792415296e-14
+    GLB2_output_latency: 4.3719286464e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.7.self_attn.proj.linear:
+    GLB2_input_latency: 4.2979535424e-14
+    GLB2_output_latency: 1.4573095488e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.7.linear1.linear:
+    GLB2_input_latency: 1.28198855232e-13
+    GLB2_output_latency: 5.8292381952e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.7.linear2.linear:
+    GLB2_input_latency: 1.71918141696e-13
+    GLB2_output_latency: 1.4573095488e-14
+    GLB1_input_latency: 1.0652414976e-14
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.8.self_attn.qkv.linear:
+    GLB2_input_latency: 9.9792415296e-14
+    GLB2_output_latency: 4.3719286464e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.8.self_attn.proj.linear:
+    GLB2_input_latency: 4.2979535424e-14
+    GLB2_output_latency: 1.4573095488e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.8.linear1.linear:
+    GLB2_input_latency: 1.28198855232e-13
+    GLB2_output_latency: 5.8292381952e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.8.linear2.linear:
+    GLB2_input_latency: 1.71918141696e-13
+    GLB2_output_latency: 1.4573095488e-14
+    GLB1_input_latency: 1.0652414976e-14
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.9.self_attn.qkv.linear:
+    GLB2_input_latency: 9.9792415296e-14
+    GLB2_output_latency: 4.3719286464e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.9.self_attn.proj.linear:
+    GLB2_input_latency: 4.2979535424e-14
+    GLB2_output_latency: 1.4573095488e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.9.linear1.linear:
+    GLB2_input_latency: 1.28198855232e-13
+    GLB2_output_latency: 5.8292381952e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.9.linear2.linear:
+    GLB2_input_latency: 1.71918141696e-13
+    GLB2_output_latency: 1.4573095488e-14
+    GLB1_input_latency: 1.0652414976e-14
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.10.self_attn.qkv.linear:
+    GLB2_input_latency: 9.9792415296e-14
+    GLB2_output_latency: 4.3719286464e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.10.self_attn.proj.linear:
+    GLB2_input_latency: 4.2979535424e-14
+    GLB2_output_latency: 1.4573095488e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.10.linear1.linear:
+    GLB2_input_latency: 1.28198855232e-13
+    GLB2_output_latency: 5.8292381952e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.10.linear2.linear:
+    GLB2_input_latency: 1.71918141696e-13
+    GLB2_output_latency: 1.4573095488e-14
+    GLB1_input_latency: 1.0652414976e-14
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.11.self_attn.qkv.linear:
+    GLB2_input_latency: 9.9792415296e-14
+    GLB2_output_latency: 4.3719286464e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.11.self_attn.proj.linear:
+    GLB2_input_latency: 4.2979535424e-14
+    GLB2_output_latency: 1.4573095488e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.11.linear1.linear:
+    GLB2_input_latency: 1.28198855232e-13
+    GLB2_output_latency: 5.8292381952e-14
+    GLB1_input_latency: 2.663103744e-15
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  layers.11.linear2.linear:
+    GLB2_input_latency: 1.71918141696e-13
+    GLB2_output_latency: 1.4573095488e-14
+    GLB1_input_latency: 1.0652414976e-14
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+
+2024-11-27 18:41:08,013 - simulator.py[line:408] - INFO: 
+================================== Report: Memory Energy (pJ) ===================================
+
+LT:
+  HBM: 8999593574.399994
+  GLB2: 3552157042.851841
+  GLB1: 6733288652.267519
+  RF: 6734754937.159679
+
+2024-11-27 18:41:08,013 - simulator.py[line:408] - INFO: 
+================================== Report: Memory Specification ===================================
+
+HBM:
+  bandwidth: 8192000000000.0
+  read_energy: 62.4
+  write_energy: 62.4
+GLB2:
+  block_size: 8
+  cache_size: 485
+  bus_width: 64
+  total_cache_size: 3872725
+  bandwidth: 2.076374235310301e+19
+  cycle_time: 0.048160875
+  access_time: 0.051851875
+  number_of_srams: 9
+  read_energy: 1.50362
+  write_energy: 1.5362
+  area: 0.00780287
+  height: 0.0659693
+  width: 0.11828
+  gate_leakage_power: 0.0208221
+  leakage_power: 0.00434909
+GLB1:
+  block_size: 8
+  cache_size: 485
+  bus_width: 64
+  total_cache_size: 235710
+  bandwidth: 2.076374235310301e+19
+  cycle_time: 0.048160875
+  access_time: 0.051851875
+  number_of_srams: 486
+  read_energy: 1.50362
+  write_energy: 1.5362
+  area: 0.00780287
+  height: 0.0659693
+  width: 0.11828
+  gate_leakage_power: 0.0208221
+  leakage_power: 0.00434909
+RF:
+  block_size: 8
+  cache_size: 485
+  bus_width: 64
+  total_cache_size: 235710
+  bandwidth: 2.076374235310301e+19
+  cycle_time: 0.048160875
+  access_time: 0.051851875
+  number_of_srams: 486
+  read_energy: 1.50362
+  write_energy: 1.5362
+  area: 0.00780287
+  height: 0.0659693
+  width: 0.11828
+  gate_leakage_power: 0.0208221
+  leakage_power: 0.00434909
+

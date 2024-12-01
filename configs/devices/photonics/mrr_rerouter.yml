@@ -1,0 +1,13 @@
+mrr_rerouter:
+  LT_MRR_REROUTER:
+    PDK: ""
+    ref: ""
+    type: ring
+    exp: True
+    cfgs:
+      static_power: 0.275 #mW
+      length: 4.8 # um
+      width: 4.8 # um
+      insertion_loss: 0.93 # dB
+
+      

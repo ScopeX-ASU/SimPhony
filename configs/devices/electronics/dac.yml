@@ -1,0 +1,26 @@
+dac:
+  DAC_1:
+    PDK: ""
+    ref: ""
+    type: DAC
+    exp: True
+    cfgs:
+      tech: 16 # nm
+      area: 11000 # um^2
+      prec: 12 # bit
+      power: 169 # mW
+      sample_rate: 14 # GSPS
+      FoM: 33.6
+  DAC_2: # A Compact 14 GS/s 8-Bit Switched-Capacitor DAC in 16 nm FinFET CMOS
+    PDK: ""
+    ref: "https://ieeexplore.ieee.org/document/9162776"
+    type: DAC
+    exp: True
+    cfgs:
+      tech: 16 # nm
+      area: 11000 # um^2
+      prec: 8 # bit
+      power: 50 # mW
+      sample_rate: 14 # GSPS
+      FoM: null
+      

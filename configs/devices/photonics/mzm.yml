@@ -1,0 +1,63 @@
+mzm:
+  ACADEMIA_EO_MZM_2x2:
+    PDK: ""
+    ref: ""
+    type: MZM
+    exp: True
+    cfgs:
+      length: 1600 # um
+      width: 460 # um
+      static_power: 0 # mW
+      insertion_loss: 3 # dB
+      extinction_ratio: 15 # dB
+      efficiency: 450 # fJ/bit at b bit when b = 1
+      testing_bit: 1  # Here is the testing bit for efficiency and mod speed
+      eo_bandwidth: 12.5 # GHz
+      modulation_speed: 25 # Gbps
+  ACADEMIA_EO_MZM_1x1:
+    PDK: ""
+    ref: ""
+    type: MZM
+    exp: True
+    cfgs:
+      length: 1600 # um
+      width: 460 # um
+      static_power: 0 # mW
+      insertion_loss: 3 # dB
+      extinction_ratio: 15 # dB
+      efficiency: 450 # fJ/bit
+      testing_bit: 1  # Here is the testing bit for efficiency and mod speed
+      eo_bandwidth: 27 # GHz
+      modulation_speed: 50 # Gbps tested at testing bit
+  SL_MZM:
+    PDK: ""
+    ref: ""
+    type: MZM
+    exp: True
+    cfgs:
+      length: 250 # um
+      width: 25 # um
+      static_power: 0 # mW
+      insertion_loss: 4.5 # dB
+      extinction_ratio: 6 # dB
+      efficiency: 50 # fJ/bit
+      testing_bit: 1  # Here is the b bit for efficiency
+      eo_bandwidth: 12.5 # GHz
+      modulation_speed: 25 # Gbps
+  LT_MZM:
+    PDK: ""
+    ref: ""
+    type: MZM
+    exp: True
+    cfgs:
+      length: 260 # um
+      width: 20 # um
+      static_power: 0 # mW
+      insertion_loss: 1.2 # dB
+      extinction_ratio: 10 # dB
+      efficiency: 450 # fJ/bit
+      testing_bit: 1  # Here is the b bit for efficiency
+      eo_bandwidth: 12.5 # GHz
+      modulation_speed: 25 # Gbps
+
+  

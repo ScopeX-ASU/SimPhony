@@ -1,0 +1,142 @@
+2024-11-27 18:44:52,305 - simulator.py[line:399] - INFO: 
+============================================================================================
+                                Simphony: ONN Arch Simulator v0.0.1
+                                    Ziang Yin
+                        Jiaqi Gu (https://scopex-asu.github.io)
+================================== Simulation Parameters ===================================
+
+nn_model: CNN
+onn_conversion_cfg: configs/onn_mapping/simple_cnn.yml
+nn_conversion_cfg: configs/nn_mapping/simple_cnn.yml
+onn_model: None
+model2arch_map_cfg: configs/architecture_mapping/simple_cnn.yml
+log_path: log/test_memory.txt
+devicelib_root: configs/devices
+device_cfg_files: ['*/*.yml']
+arch_cfg_file: configs/design/architectures/LT_hetero.yml
+arch_version: v1
+input_shape: (2, 3, 32, 32)
+2024-11-27 18:44:52,343 - lsq.py[line:220] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int8 quantization with offset: False
+2024-11-27 18:44:52,915 - lsq.py[line:220] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int8 quantization with offset: False
+2024-11-27 18:44:53,478 - lsq.py[line:220] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int8 quantization with offset: False
+2024-11-27 18:44:54,360 - utils.py[line:216] - INFO: Couldn't find the mapping for layer  (CNN) in the mapping config.
+2024-11-27 18:44:54,360 - utils.py[line:209] - WARNING: Mismatch in miniblock for layer conv1 (TeMPOBlockConv2d): model has [2, 2, 4, 4], arch has [4, 2, 12, 12]
+2024-11-27 18:44:54,360 - utils.py[line:209] - WARNING: Mismatch in w_bit for layer conv1 (TeMPOBlockConv2d): model has 8, arch has 4
+2024-11-27 18:44:54,360 - utils.py[line:209] - WARNING: Mismatch in in_bit for layer conv1 (TeMPOBlockConv2d): model has 8, arch has 4
+2024-11-27 18:44:54,360 - utils.py[line:209] - WARNING: Mismatch in out_bit for layer conv1 (TeMPOBlockConv2d): model has 8, arch has 4
+2024-11-27 18:44:54,360 - utils.py[line:216] - INFO: Couldn't find the mapping for layer conv1.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:44:54,360 - utils.py[line:216] - INFO: Couldn't find the mapping for layer conv1.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:44:54,360 - utils.py[line:216] - INFO: Couldn't find the mapping for layer conv1.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:44:54,361 - utils.py[line:209] - WARNING: Mismatch in miniblock for layer conv2 (TeMPOBlockConv2d): model has [2, 2, 4, 4], arch has [4, 2, 12, 12]
+2024-11-27 18:44:54,361 - utils.py[line:209] - WARNING: Mismatch in w_bit for layer conv2 (TeMPOBlockConv2d): model has 8, arch has 4
+2024-11-27 18:44:54,361 - utils.py[line:209] - WARNING: Mismatch in in_bit for layer conv2 (TeMPOBlockConv2d): model has 8, arch has 4
+2024-11-27 18:44:54,361 - utils.py[line:209] - WARNING: Mismatch in out_bit for layer conv2 (TeMPOBlockConv2d): model has 8, arch has 4
+2024-11-27 18:44:54,361 - utils.py[line:216] - INFO: Couldn't find the mapping for layer conv2.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:44:54,361 - utils.py[line:216] - INFO: Couldn't find the mapping for layer conv2.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:44:54,361 - utils.py[line:216] - INFO: Couldn't find the mapping for layer conv2.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:44:54,361 - utils.py[line:216] - INFO: Couldn't find the mapping for layer pool (AdaptiveAvgPool2d) in the mapping config.
+2024-11-27 18:44:54,361 - utils.py[line:209] - WARNING: Mismatch in miniblock for layer linear (TeMPOBlockLinear): model has [2, 2, 4, 4], arch has [4, 2, 12, 12]
+2024-11-27 18:44:54,361 - utils.py[line:209] - WARNING: Mismatch in w_bit for layer linear (TeMPOBlockLinear): model has 8, arch has 4
+2024-11-27 18:44:54,361 - utils.py[line:209] - WARNING: Mismatch in in_bit for layer linear (TeMPOBlockLinear): model has 8, arch has 4
+2024-11-27 18:44:54,362 - utils.py[line:209] - WARNING: Mismatch in out_bit for layer linear (TeMPOBlockLinear): model has 8, arch has 4
+2024-11-27 18:44:54,362 - utils.py[line:216] - INFO: Couldn't find the mapping for layer linear.input_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:44:54,362 - utils.py[line:216] - INFO: Couldn't find the mapping for layer linear.weight_quantizer (WeightQuantizer_LSQ) in the mapping config.
+2024-11-27 18:44:54,362 - utils.py[line:216] - INFO: Couldn't find the mapping for layer linear.output_quantizer (ActQuantizer_LSQ) in the mapping config.
+2024-11-27 18:44:54,362 - utils.py[line:220] - INFO: Layer mapping check completed.
+2024-11-27 18:44:54,363 - lsq.py[line:115] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int8 quantization with offset: True
+2024-11-27 18:44:54,365 - lsq.py[line:115] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int8 quantization with offset: True
+2024-11-27 18:44:54,365 - lsq.py[line:115] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int8 quantization with offset: True
+2024-11-27 18:44:54,367 - lsq.py[line:115] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int8 quantization with offset: True
+2024-11-27 18:44:54,367 - lsq.py[line:115] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int8 quantization with offset: True
+2024-11-27 18:44:54,369 - lsq.py[line:115] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int8 quantization with offset: True
+2024-11-27 18:44:54,509 - simulator.py[line:408] - INFO: 
+================================== Report: Memory Latency (s) ===================================
+
+LT:
+  conv1:
+    GLB2_input_latency: 3.082296e-16
+    GLB2_output_latency: 6.935166e-16
+    GLB1_input_latency: 1.24832988e-16
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  conv2:
+    GLB2_input_latency: 7.21257264e-16
+    GLB2_output_latency: 6.04130016e-16
+    GLB1_input_latency: 2.49665976e-16
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+  linear:
+    GLB2_input_latency: 1.7337915e-16
+    GLB2_output_latency: 9.632175e-19
+    GLB1_input_latency: 7.073869319999999e-16
+    GLB1_output_latency: 5.5481327999999996e-17
+    RF_input_latency: 4.1610996e-17
+    RF_output_latency: 5.5481327999999996e-17
+
+2024-11-27 18:44:54,509 - simulator.py[line:408] - INFO: 
+================================== Report: Memory Energy (pJ) ===================================
+
+LT:
+  HBM: 3241056.0
+  GLB2: 1159052.94152
+  GLB1: 2172911.97312
+  RF: 1857583.97952
+
+2024-11-27 18:44:54,509 - simulator.py[line:408] - INFO: 
+================================== Report: Memory Specification ===================================
+
+HBM:
+  bandwidth: 8192000000000.0
+  read_energy: 62.4
+  write_energy: 62.4
+GLB2:
+  block_size: 8
+  cache_size: 485
+  bus_width: 64
+  total_cache_size: 27645
+  bandwidth: 2.076374235310301e+19
+  cycle_time: 0.048160875
+  access_time: 0.051851875
+  number_of_srams: 1
+  read_energy: 1.50362
+  write_energy: 1.5362
+  area: 0.00780287
+  height: 0.0659693
+  width: 0.11828
+  gate_leakage_power: 0.0208221
+  leakage_power: 0.00434909
+GLB1:
+  block_size: 8
+  cache_size: 485
+  bus_width: 64
+  total_cache_size: 235710
+  bandwidth: 2.076374235310301e+19
+  cycle_time: 0.048160875
+  access_time: 0.051851875
+  number_of_srams: 486
+  read_energy: 1.50362
+  write_energy: 1.5362
+  area: 0.00780287
+  height: 0.0659693
+  width: 0.11828
+  gate_leakage_power: 0.0208221
+  leakage_power: 0.00434909
+RF:
+  block_size: 8
+  cache_size: 485
+  bus_width: 64
+  total_cache_size: 235710
+  bandwidth: 2.076374235310301e+19
+  cycle_time: 0.048160875
+  access_time: 0.051851875
+  number_of_srams: 486
+  read_energy: 1.50362
+  write_energy: 1.5362
+  area: 0.00780287
+  height: 0.0659693
+  width: 0.11828
+  gate_leakage_power: 0.0208221
+  leakage_power: 0.00434909
+

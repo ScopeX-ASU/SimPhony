@@ -1,0 +1,82 @@
+DODE:
+  v1:
+    devices:
+      phase_shifter:
+        - MEMS_PS
+      photodetector:
+        - LT_PD
+      coupler:
+        - LT_DC_2x2
+      y_branch:
+        - LT_Y_Branch
+
+    node:
+      netlist:
+        instances:
+          # Full path, avoid repeat name
+          # User constrain:
+          i0: [phase_shifter, 0]
+          i1: [coupler, 0]
+          i2: [photodetector, 0]
+          i3: [photodetector, 0]
+          i4: [coupler, 0]
+          i5: [y_branch, 0]
+
+        # If undefined, then will follow the default scaling rule, which is R*C*H*W
+        sharing_rules: null
+
+        # We highly recommend to define the full connectivity of a node for accurate insertion loss, energy, and area calculation
+        nets:
+          n1: [i5, i0]
+          n2: [i0, i1]
+          n3: [i1, i2]
+          n4: [i5, i1]
+          n5: [i1, i3]
+
+        # If undefined, then it will not depulicate any nodes during insertion loss calcution, it will
+        # follow exact number of instance you defined in the nets
+        replication: null
+
+        temporal_accume_factor:
+          duration: 3
+          devices: [i2, i3]
+
+        # Undefined means no devices need to scaled based on port number
+        # Currently only applies to MMI
+        ports_num: null
+
+        # No devices used for operand 1 encoding in this node
+        operand_1: null
+
+        # No devices used for operand 1 encoding in this node
+        operand_2: null
+
+        insertion_loss_final_device: photodetector
+        # Should not declare this chip_mapping attribute in node level
+        # As we assume all devices are in the same chip for a node
+        # But leave the option here user decision
+        chip_mapping: null
+
+      # All in um scale
+      device_spacing_flag: True
+      node_spacing_flag: True
+      # [TOP, BOTTOM, LEFT, RIGHT] Spacing
+      device_spacing: [5, 5, 5, 5]
+      node_spacing: [5, 5, 5, 5]
+      
+      # If you defined a longest insertion loss path, then we will not calculate the longest path for you
+      longest_path: null 
+      # You can also provide a gds factory bounding box area for the node calculation
+      bounding_box_area: null # 6643.9616 # um^2 
+      # Use default bounding box estimator
+      bounding_box_estimator: null
+      # Use default device counter function
+      device_counter_function: null
+
+      
+
+
+
+
+  
+        

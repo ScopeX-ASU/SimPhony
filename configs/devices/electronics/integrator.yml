@@ -1,0 +1,9 @@
+integrator:
+  Integrator_1:
+    PDK: ""
+    ref: ""
+    type: Integrator
+    exp: True
+    cfgs:
+      area: 560 # um^2
+      static_power: 0.3 # mW

@@ -1,0 +1,19 @@
+y_branch:
+  Customized_Y_Branch:
+    PDK: ""
+    ref: ""
+    type: Y_branch
+    exp: True
+    cfgs:
+      width: 10 # nm
+      length: 22 # um
+      insertion_loss: 0.1
+  LT_Y_Branch:
+    PDK: ""
+    ref: ""
+    type: Y_branch
+    exp: True
+    cfgs:
+      width: 1.3 # um
+      length: 1.8 # um
+      insertion_loss: 0.1
