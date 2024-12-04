@@ -52,7 +52,7 @@ These scaling rules are expressed as customizable symbolic expressions in circui
   <img src="figs/ParametricTeMPO.jpg" width="500" height="300"/>
 </p>
 
-In folder, we provide [Lightning Transformer](https://arxiv.org/abs/2305.19533), a multi-wavelength version of the [TeMPO](https://arxiv.org/html/2402.07393v1) architecture for users to study and validate. You may run the example in the ```unitest``` folders to learn how each module can be used.
+In this folder, we provide [Lightning Transformer](https://arxiv.org/abs/2305.19533), a multi-wavelength version of the [TeMPO](https://arxiv.org/html/2402.07393v1) architecture for users to study and validate. You may run the example in the ```unitest``` folders to learn how each module can be used.
 
 <p align="center">
   <img src="figs/DOTAValidArea.jpg" width="200" height="80"/>
@@ -65,9 +65,9 @@ In folder, we provide [Lightning Transformer](https://arxiv.org/abs/2305.19533),
 - **Device Libraries**:
   - **Photonic Devices**: Includes energy, area, latency, and insertion loss parameters.
   - **Electronic Devices**: Provides detailed models for electronic components.
-- **Memory Computation**: Supports bandwidth awared memory hierarchies 
+- **Memory Computation**: Supports bandwidth aware memory hierarchies 
 - **Integration with TorchONN**: Seamless integration for optical neural network simulations.
-- **Detailed Simulation Report**: Reports from Simphony contains detailed information of each device and each memory hierachies energy, area breakdown. It also provides detailed insertion loss analysis with critial path defined.
+- **Detailed Simulation Report**: Reports from Simphony contain detailed information on each device and each memory hierarchy's energy, and area breakdown. It also provides detailed insertion loss analysis with critical path defined.
 
 ## Folder Structure
 - **cacti/**: Contains the CACTI tool for cache and memory simulation.
@@ -78,9 +78,9 @@ In folder, we provide [Lightning Transformer](https://arxiv.org/abs/2305.19533),
   - **memory/**: Memory hierarchy configurations.
   - **nn_mapping/**: Neural network mapping configurations.
   - **onn_mapping/**: Optical neural network mapping configurations.
-- **models/**: Device and component models used in simulations.
+- **models/**: Pre-defined models with customizable layers used in simulations.
 - **onnarchsim/**: Core simulation engine and supporting scripts.
-  - **database/**: Scripts for recurssive architecture and device configuration loading.
+  - **database/**: Scripts for recursive architecture and device configuration loading.
   - **plot/**: Scripts for visualizing simulation outputs.
   - **workflow/**: Manages simulation workflows.
   - **simulator.py**: The main simulator script.
@@ -93,7 +93,7 @@ In folder, we provide [Lightning Transformer](https://arxiv.org/abs/2305.19533),
 - Python 3.6 or higher
 - Required Python packages (listed in requirements.txt)
 - CACTI tool installed in the cacti/ directory
-- TorchONN (optional but **higly recommanded**, for optical neural network simulations)
+- TorchONN (optional but **highly recommended**, for optical neural network simulations)
 
 
 Make sure to install the packages mentioned in the requirements.txt.
