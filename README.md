@@ -120,13 +120,11 @@ Please go over each example in the ```unitest``` folder in the following order:
 
 # Citing SCATTER
 ```
-@misc{yin2024simphonydevicecircuitarchitecturecrosslayermodeling,
-      title={SimPhony: A Device-Circuit-Architecture Cross-Layer Modeling and Simulation Framework for Heterogeneous Electronic-Photonic AI System}, 
+@inproceedings{yin2025simphony,
+      title={{SimPhony: A Device-Circuit-Architecture Cross-Layer Modeling and Simulation Framework for Heterogeneous Electronic-Photonic AI System}}, 
       author={Ziang Yin and Meng Zhang and Amir Begovic and Rena Huang and Jeff Zhang and Jiaqi Gu},
-      year={2024},
-      eprint={2411.13715},
-      archivePrefix={arXiv},
-      primaryClass={physics.optics},
+      year={2025},
+      booktitle={ACM/IEEE Design Automation Conference (DAC)},
       url={https://arxiv.org/abs/2411.13715}, 
 }
 ```
