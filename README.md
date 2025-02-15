@@ -19,24 +19,24 @@ This repo is the official implementation of ["SimPhony: A Device-Circuit-Archite
 **SimPhony** aims to provide researchers and engineers with a powerful tool for simulating and analyzing photonic architectures. By supporting various dataflow switching methods and offering extensive device libraries, SimPhony enables detailed performance evaluations and optimizations of photonic systems.
 
 <p align="center">
-  <img src="figs/FrameworkOverview.jpg" width="400" height="200"/>
+  <img src="figs/FrameworkOverview.jpg" width="500" height="250"/>
 
 </p>
 
 In **SimPhony**, users can define the basic building blocks and reuse them in photonic core designs. If a complete netlist is provided, **SimPhony** is capable of calculating area in a layout-aware manner. Users can always define a customized function for area calculation.
 <p align="center">
   <img src="figs/NodeDef.jpg" width="300" height="100"/>
-  <img src="figs/NodeDAG.jpg" width="200" height="100"/>
+  <img src="figs/NodeDAG.jpg" width="170" height="100"/>
 </p>
 
 **SimPhony** realizes photonic domain parallelism during latency and energy calculation; users may define it in the configuration.
 <p align="center">
-  <img src="figs/PhotonicParallelism.jpg" width="400" height="200"/>
+  <img src="figs/PhotonicParallelism.jpg" width="500" height="250"/>
 </p>
 
 **SimPhony** is also capable of calculating device energy in a data-dependent manner. (Warning: this can only be realized when using both [TorchONN](https://github.com/JeremieMelo/pytorch-onn) and "PowerCalculator" located in ```models/layers/utils```) Users can always define a customized function for any arbitrary energy calculation.
 <p align="center">
-  <img src="figs/DataDependentEnergy.jpg" width="400" height="200"/>
+  <img src="figs/DataDependentEnergy.jpg" width="450" height="200"/>
 </p>
 
 Case Study: Dynamic Array-style Tensor Cores [TeMPO](https://arxiv.org/html/2402.07393v1).
@@ -49,14 +49,14 @@ define scaling rules applied to each node and describe inter-node
 connections. There are **RCHW** total nodes for parallel dot-product. As the output of C cores in a tile are in-situ accumulated, integrators/ADCs can be shared and thus scaled by **CHW** . MZM group A encodes one matrix operand and can be broadcast to R tiles. Thus, the input encoders, i.e., DAC A and MZM A, are scaled by **RH**. 
 These scaling rules are expressed as customizable symbolic expressions in circuit description files, enabling user-defined reuse styles to suit specific designs.
 <p align="center">
-  <img src="figs/ParametricTeMPO.jpg" width="500" height="300"/>
+  <img src="figs/ParametricTeMPO.jpg" width="650" height="400"/>
 </p>
 
 In this folder, we provide [Lightning Transformer](https://arxiv.org/abs/2305.19533), a multi-wavelength version of the [TeMPO](https://arxiv.org/html/2402.07393v1) architecture for users to study and validate. You may run the example in the ```unitest``` folders to learn how each module can be used.
 
 <p align="center">
-  <img src="figs/DOTAValidArea.jpg" width="200" height="90"/>
-  <img src="figs/DOTAValidPower.jpg" width="200" height="90"/>
+  <img src="figs/DOTAValidArea.jpg" width="263" height="100"/>
+  <img src="figs/DOTAValidPower.jpg" width="222" height="102"/>
 </p>
 
 ## Features
