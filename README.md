@@ -55,8 +55,8 @@ These scaling rules are expressed as customizable symbolic expressions in circui
 In this folder, we provide [Lightning Transformer](https://arxiv.org/abs/2305.19533), a multi-wavelength version of the [TeMPO](https://arxiv.org/html/2402.07393v1) architecture for users to study and validate. You may run the example in the ```unitest``` folders to learn how each module can be used.
 
 <p align="center">
-  <img src="figs/DOTAValidArea.jpg" width="200" height="80"/>
-  <img src="figs/DOTAValidPower.jpg" width="200" height="80"/>
+  <img src="figs/DOTAValidArea.jpg" width="200" height="90"/>
+  <img src="figs/DOTAValidPower.jpg" width="200" height="90"/>
 </p>
 
 ## Features
