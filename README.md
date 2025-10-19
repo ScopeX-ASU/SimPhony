@@ -118,7 +118,7 @@ Please go over each example in the ```unitest``` folder in the following order:
 9. ```test_sim.py```
 
 
-# Citing SCATTER
+# Citing SimPhony
 ```
 @inproceedings{yin2025simphony,
       title={{SimPhony: A Device-Circuit-Architecture Cross-Layer Modeling and Simulation Framework for Heterogeneous Electronic-Photonic AI System}}, 
