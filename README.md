@@ -1,8 +1,29 @@
-# SimPhony: A Device-Circuit-Architecture Cross-Layer Modeling and Simulation Framework for Heterogeneous Electronic-Photonic AI Systems
+<p align="center">
+<img src="simphony_logo.png" alt="simphony Logo" width="450">
+</p>
+<h2><p align="center">SimPhony: A Device-Circuit-Architecture Cross-Layer Modeling and Simulation Framework for Heterogeneous Electronic-Photonic AI Systems</p></h2>
+<p align="center">
+    <a href="https://github.com/JeremieMelo/pytorch-onn/blob/main/LICENSE">
+        <img alt="License" src="https://img.shields.io/github/license/JeremieMelo/pytorch-onn">
+    </a>
+</p>
 
 By [Ziang Yin](https://scopex-asu.github.io/index.html), Meng Zhang, Amir Begovic, [Rena Huang](https://faculty.rpi.edu/rena-huang), [Jeff Zhang](https://search.asu.edu/profile/4346755), and [Jiaqi Gu<sup>†</sup>](https://scopex-asu.github.io/index.html).
 
 This repo is the official implementation of ["SimPhony: A Device-Circuit-Architecture Cross-Layer Modeling and Simulation Framework for Heterogeneous Electronic-Photonic AI Systems"](https://arxiv.org/abs/2411.13715)
+
+```
+@inproceedings{yin2025simphony,
+      title={{SimPhony: A Device-Circuit-Architecture Cross-Layer Modeling and Simulation Framework for Heterogeneous Electronic-Photonic AI System}}, 
+      author={Ziang Yin and Meng Zhang and Amir Begovic and Rena Huang and Jeff Zhang and Jiaqi Gu},
+      year={2025},
+      booktitle={ACM/IEEE Design Automation Conference (DAC)},
+      url={https://arxiv.org/abs/2411.13715}, 
+}
+```
+```
+Ziang Yin, Meng Zhang, Amir Begovic, Rena Huang, Jeff Zhang and Jiaqi Gu, "SimPhony: A Device-Circuit-Architecture Cross-Layer Modeling and Simulation Framework for Heterogeneous Electronic-Photonic AI System", ACM/IEEE Design Automation Conference (DAC), 2025.
+```
 
 ## Table of Contents
 
@@ -117,17 +138,3 @@ Please go over each example in the ```unitest``` folder in the following order:
 8. ```test_memory.py```
 9. ```test_sim.py```
 
-
-# Citing SimPhony
-```
-@inproceedings{yin2025simphony,
-      title={{SimPhony: A Device-Circuit-Architecture Cross-Layer Modeling and Simulation Framework for Heterogeneous Electronic-Photonic AI System}}, 
-      author={Ziang Yin and Meng Zhang and Amir Begovic and Rena Huang and Jeff Zhang and Jiaqi Gu},
-      year={2025},
-      booktitle={ACM/IEEE Design Automation Conference (DAC)},
-      url={https://arxiv.org/abs/2411.13715}, 
-}
-```
-```
-Ziang Yin, Meng Zhang, Amir Begovic, Rena Huang, Jeff Zhang and Jiaqi Gu, "SimPhony: A Device-Circuit-Architecture Cross-Layer Modeling and Simulation Framework for Heterogeneous Electronic-Photonic AI System", ACM/IEEE Design Automation Conference (DAC), 2025.
-```
