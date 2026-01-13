@@ -1,5 +1,5 @@
 <p align="center">
-<img src="simphony_logo.png" alt="simphony Logo" width="450">
+<img src="figs/simphony_logo.png" alt="simphony Logo" width="450">
 </p>
 <h2><p align="center">SimPhony: A Device-Circuit-Architecture Cross-Layer Modeling and Simulation Framework for Heterogeneous Electronic-Photonic AI Systems</p></h2>
 <p align="center">
