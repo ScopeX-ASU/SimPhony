@@ -1,3 +1,6 @@
 [submodule "cacti"]
 	path = cacti
 	url = https://github.com/HewlettPackard/cacti.git
+[submodule "soda-opt"]
+	path = soda-opt
+	url = https://github.com/pnnl/soda-opt
