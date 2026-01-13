@@ -4,7 +4,7 @@
 <h2><p align="center">SimPhony: A Device-Circuit-Architecture Cross-Layer Modeling and Simulation Framework for Heterogeneous Electronic-Photonic AI Systems</p></h2>
 <p align="center">
     <a href="https://github.com/JeremieMelo/pytorch-onn/blob/main/LICENSE">
-        <img alt="License" src="https://img.shields.io/github/license/JeremieMelo/pytorch-onn">
+        <img alt="License" src="https://img.shields.io/github/license/ScopeX-ASU/SimPhony">
     </a>
 </p>
 
