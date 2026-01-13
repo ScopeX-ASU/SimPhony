@@ -4,10 +4,7 @@ from pyutils.compute import add_gaussian_noise
 from torch import Tensor, nn
 from torch.types import Device
 
-from .utils import (
-    ActQuantizer_LSQ,
-    WeightQuantizer_LSQ,
-)
+from .utils import ActQuantizer_LSQ, WeightQuantizer_LSQ
 
 __all__ = [
     "QMatMul",

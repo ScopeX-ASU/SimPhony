@@ -8,6 +8,7 @@ from onnarchsim.workflow.utils import load_required_devices
 
 # Used for checking whether the loaded config is correct
 
+
 def test_sub_arch_db():
     hetero_arch = HeteroArchitectureLib(config_file="LT_hetero.yml").dict()
     sub_arch = hetero_arch["hetero_arch"].get("sub_archs", {}).get("sub_arch_1", {})

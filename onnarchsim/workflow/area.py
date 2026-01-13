@@ -1,11 +1,10 @@
 import math
+import warnings
 from collections import deque
 from typing import Any, Dict, List, Tuple
 
 import networkx as nx
 from mmengine.registry import Registry
-
-import warnings
 
 from onnarchsim.workflow.insertion_loss import construct_node_graph
 from onnarchsim.workflow.utils import (
@@ -13,7 +12,6 @@ from onnarchsim.workflow.utils import (
     load_required_devices,
     parse_device_name,
 )
-
 
 __all__ = [
     "area_calculator",
@@ -424,15 +422,21 @@ def initalize_all_devices_area(
     C = sub_arch["cores_per_tile"]
     num_wavelength = sub_arch["core"]["num_wavelength"]
 
-    #TODO: Need to handle multi-node per core
+    # TODO: Need to handle multi-node per core
     chip_type_node = components.pop("node")["chip_type"]
-    
+
     for device, device_cfg in components.items():
         part, type, index, instance, name = parse_device_name(device)
         if "mmi" in type:
             ports_num = core_config.get("netlist", {}).get("ports_num", {})
             area = cal_MMI_area(
-                device_cfg, ports_num[instance], R, C, core_width, core_height, num_wavelength
+                device_cfg,
+                ports_num[instance],
+                R,
+                C,
+                core_width,
+                core_height,
+                num_wavelength,
             )
             device_cfg["area"] = area
 

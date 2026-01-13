@@ -32,7 +32,7 @@ DPTC:
         weight: full
         input: full
         output: full
-      
+
       # width: W
       width: 12
       # height: H
@@ -47,7 +47,7 @@ DPTC:
         in_bit: 4
         w_bit: 4
         out_bit: 4
-      
+
       netlist:
         # Define any instances used for assemble the architecture
         # If same type of device encoded different operand, please define them separately
@@ -91,7 +91,7 @@ DPTC:
           n5: [i7, i8]
           n6: [i8, i2]
           n7: [i1, i0]
-        
+
         # Define the replication of the devices for connection in nets
         # This part is separate from scaling rules, for any number of devices you defined here,
         # will only be used for insertion loss calculation, not for scaling
@@ -105,7 +105,7 @@ DPTC:
           devices: [i2, i8]
 
           # Only core configuration will include memory part effected by temporal factor
-          memory: output 
+          memory: output
 
         # It currently only used for mmi scaling purpose, may used for other device scaling in the future
         # [input ports, output ports], only define this if differernt from the default
@@ -138,7 +138,7 @@ DPTC:
       # [TOP, BOTTOM, LEFT, RIGHT] Spacing
       device_spacing: null
       node_spacing: null
-    
+
       bounding_box_estimator: null
       device_counter_function: null
 
@@ -155,13 +155,3 @@ DPTC:
     # Longest path is manually determined
     # Manually indicate the insertion loss path {}
     # [Include laser source in photonic device: need to have laser coupling loss] (fanout determined by architecture design)
-
-      
-
-      
-
-
-
-
-  
-        

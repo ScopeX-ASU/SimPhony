@@ -54,4 +54,3 @@ crossing:
       insertion_loss: 0.2 # dB
       crosstalk: -40 # dB
       wavelength: [1540, 1560] # nm
-      

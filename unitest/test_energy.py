@@ -51,9 +51,7 @@ sim = ONNArchSimulator(
 
 # After the partitioned cycles and insertion loss been calculated
 # (Isolated in unitest/test_dataflow.py)
-partition_cycles = sim.simu_partition_cycles(
-    sim.layer_workloads, sim.layer_sizes
-)
+partition_cycles = sim.simu_partition_cycles(sim.layer_workloads, sim.layer_sizes)
 # (Isoladted in unitest/test_insertion_loss.py)
 sim.log_report(
     partition_cycles,

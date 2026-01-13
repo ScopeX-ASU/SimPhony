@@ -3,17 +3,13 @@ from typing import Optional, Tuple
 import torch
 import torch.nn.functional as F
 from mmengine.registry import MODELS
-
 from torch import Tensor, nn
 from torch.nn import Parameter
 from torch.nn.modules.utils import _pair
 from torch.types import Device, _size
 
 from .quantized_base_layer import QBaseLayer
-from .utils import (
-    ActQuantizer_LSQ,
-    WeightQuantizer_LSQ,
-)
+from .utils import ActQuantizer_LSQ, WeightQuantizer_LSQ
 
 __all__ = [
     "QConv2d",

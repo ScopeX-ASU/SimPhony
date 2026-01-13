@@ -63,20 +63,12 @@ DODE:
       # [TOP, BOTTOM, LEFT, RIGHT] Spacing
       device_spacing: [5, 5, 5, 5]
       node_spacing: [5, 5, 5, 5]
-      
+
       # If you defined a longest insertion loss path, then we will not calculate the longest path for you
-      longest_path: null 
+      longest_path: null
       # You can also provide a gds factory bounding box area for the node calculation
-      bounding_box_area: null # 6643.9616 # um^2 
+      bounding_box_area: null # 6643.9616 # um^2
       # Use default bounding box estimator
       bounding_box_estimator: null
       # Use default device counter function
       device_counter_function: null
-
-      
-
-
-
-
-  
-        

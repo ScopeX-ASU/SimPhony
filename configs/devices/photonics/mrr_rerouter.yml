@@ -9,5 +9,3 @@ mrr_rerouter:
       length: 4.8 # um
       width: 4.8 # um
       insertion_loss: 0.93 # dB
-
-      

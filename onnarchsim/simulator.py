@@ -11,35 +11,24 @@ import yaml
 from pyutils.general import get_logger
 from torch import nn
 
-from utils.config import Config
-
 from onnarchsim.database.device_db import DeviceLib
 from onnarchsim.database.hetero_arch_db import HeteroArchitectureLib
 from onnarchsim.database.utils import break_path, ensure_file_exists
 from onnarchsim.version import __version__
-from onnarchsim.workflow.area import (
-    area_calculator,
-    chip_area_calculator,
-)
+from onnarchsim.workflow.area import area_calculator, chip_area_calculator
 from onnarchsim.workflow.dataflow import (
     cycles,
     extract_layer_info,
     generate_layer_sizes,
 )
-from onnarchsim.workflow.energy import (
-    chip_energy_calculator,
-    energy_calculator,
-)
-from onnarchsim.workflow.insertion_loss import (
-    architecture_insertion_loss,
-)
+from onnarchsim.workflow.energy import chip_energy_calculator, energy_calculator
+from onnarchsim.workflow.insertion_loss import architecture_insertion_loss
 from onnarchsim.workflow.memory import (
     calculate_memory_latency_and_energy,
     generate_memory_setting,
 )
-from onnarchsim.workflow.utils import (
-    check_layer_mapping,
-)
+from onnarchsim.workflow.utils import check_layer_mapping
+from utils.config import Config
 
 try:
     from torchonn.models.base_model import ONNBaseModel
@@ -48,6 +37,7 @@ except Exception:
     print("Warning: torchonn package not found")
 
 logger = None
+
 
 class ONNArchSimulator(object):
     def __init__(
@@ -83,14 +73,14 @@ class ONNArchSimulator(object):
         self.onn_model = onn_model
         self.params.update(
             {
-                "nn_model": nn_model.__class__.__name__
-                if nn_model is not None
-                else None,
+                "nn_model": (
+                    nn_model.__class__.__name__ if nn_model is not None else None
+                ),
                 "onn_conversion_cfg": onn_conversion_cfg,
                 "nn_conversion_cfg": nn_conversion_cfg,
-                "onn_model": onn_model.__class__.__name__
-                if onn_model is not None
-                else None,
+                "onn_model": (
+                    onn_model.__class__.__name__ if onn_model is not None else None
+                ),
                 "model2arch_map_cfg": model2arch_map_cfg,
                 "log_path": log_path,
                 "devicelib_root": devicelib_root,
@@ -197,7 +187,7 @@ class ONNArchSimulator(object):
         layer_workloads = (
             layer_workloads if layer_workloads is not None else self.layer_workloads
         )
-        
+
         model_partition_cycles = {}
         for sub_arch_name, layers in self.sub_arch_to_layer_mapping.items():
             model_partition_cycles[sub_arch_name] = {}
@@ -217,7 +207,7 @@ class ONNArchSimulator(object):
                     forward_factor_w,
                     forward_factor_x,
                     arch_dims,
-                )= cycles(
+                ) = cycles(
                     miniblock=self.arch_blocks[layer_name],
                     matrices=matrices,
                     layer_sizes=sub_arch_layer_sizes[layer_name],
@@ -255,7 +245,7 @@ class ONNArchSimulator(object):
                     forward_factor_x,
                 )
                 self.arch_dim_map[sub_arch_name] = arch_dims
-                
+
         return model_partition_cycles
 
     def simu_insertion_loss(self) -> dict:
@@ -319,8 +309,6 @@ class ONNArchSimulator(object):
                 memory_latency + sub_arch_computation_latency[sub_arch_name]
             )
         return sub_arch_total_latency
-
-
 
     def simu_energy(
         self, model_partition_cycles: dict, insertion_loss_dict: dict

@@ -15,7 +15,7 @@ LT:
         block_size: 8
         config_file_name: "GLB1.cfg"
         output_file_name: "GLB1Report.txt"
-      RF: 
+      RF:
         cache_size: 485   # Bytes
         block_size: 8
         config_file_name: "RF.cfg"
@@ -28,13 +28,3 @@ LT:
       DPTC:
         version: v1
         file: default
-        
-
-
-      
-
-
-
-
-  
-        

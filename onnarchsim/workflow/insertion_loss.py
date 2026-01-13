@@ -119,7 +119,6 @@ def construct_node_graph(
                 f"Source {src} or destination {dst} not match with defined instances"
             )
 
-
     return G, instance_weights, instances
 
 

@@ -192,7 +192,6 @@ def generate_layer_sizes(
                 f"Unable to compute reshaped sizes for layer {layer_name} ({layer_type})"
             )
 
-
         layer_shapes[layer_name] = (reshaped_input_size, reshaped_weight_size)
 
     return layer_shapes, layer_sizes

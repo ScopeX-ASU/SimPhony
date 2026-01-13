@@ -12,13 +12,12 @@ LastEditTime: 2021-06-06 01:46:57
 """
 import hashlib
 import json
-import yaml
 import os
 from ast import literal_eval
 from typing import Any, Dict, List, Tuple, Union
 
+import yaml
 from multimethod import multimethod
-
 
 __all__ = [
     "Config",

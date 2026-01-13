@@ -3,9 +3,7 @@ from typing import Dict
 import torch
 from pyutils.compute import add_gaussian_noise
 from torch import Tensor, nn
-
 from torch.types import Device
-
 
 __all__ = ["QBaseLayer"]
 

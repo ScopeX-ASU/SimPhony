@@ -64,5 +64,3 @@ def plot_arch_breakdown(
     fig.savefig(f"./{save_path}/{plot_attr}.png", format="png")
     fig.savefig(f"./{save_path}/{plot_attr}.pdf", format="pdf")
     pdf_crop(f"./{save_path}/{plot_attr}.pdf", f"./{save_path}/{plot_attr}.pdf")
-
-

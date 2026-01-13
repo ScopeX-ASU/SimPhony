@@ -1,4 +1,4 @@
-2024-11-27 18:04:06,934 - simulator.py[line:399] - INFO: 
+2024-11-27 18:04:06,934 - simulator.py[line:399] - INFO:
 ============================================================================================
                                 Simphony: ONN Arch Simulator v0.0.1
                                     Ziang Yin
@@ -49,7 +49,7 @@ input_shape: (2, 3, 32, 32)
 2024-11-27 18:04:08,998 - lsq.py[line:115] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int8 quantization with offset: True
 2024-11-27 18:04:08,999 - lsq.py[line:115] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int8 quantization with offset: True
 2024-11-27 18:04:09,000 - lsq.py[line:115] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int8 quantization with offset: True
-2024-11-27 18:04:09,002 - simulator.py[line:408] - INFO: 
+2024-11-27 18:04:09,002 - simulator.py[line:408] - INFO:
 ================================== Report: Insertion Loss (dB) ===================================
 
 LT:
@@ -57,4 +57,3 @@ LT:
   node_insertion_loss: 0.76
   core_path: ['i4', 'i5', 'i6_0', 'i6_1', 'i6_2', 'i6_3', 'i3_0', 'i3_1', 'i0', 'i7']
   core_insertion_loss: 6.220000000000001
-

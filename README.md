@@ -14,11 +14,11 @@ This repo is the official implementation of ["SimPhony: A Device-Circuit-Archite
 
 ```
 @inproceedings{yin2025simphony,
-      title={{SimPhony: A Device-Circuit-Architecture Cross-Layer Modeling and Simulation Framework for Heterogeneous Electronic-Photonic AI System}}, 
+      title={{SimPhony: A Device-Circuit-Architecture Cross-Layer Modeling and Simulation Framework for Heterogeneous Electronic-Photonic AI System}},
       author={Ziang Yin and Meng Zhang and Amir Begovic and Rena Huang and Jeff Zhang and Jiaqi Gu},
       year={2025},
       booktitle={ACM/IEEE Design Automation Conference (DAC)},
-      url={https://arxiv.org/abs/2411.13715}, 
+      url={https://arxiv.org/abs/2411.13715},
 }
 ```
 ```
@@ -62,12 +62,12 @@ In **SimPhony**, users can define the basic building blocks and reuse them in ph
 
 Case Study: Dynamic Array-style Tensor Cores [TeMPO](https://arxiv.org/html/2402.07393v1).
 
-We first define the architecture parameters: **R** tiles, each containing **C** cores, with **H** $\times$ **W** dot-product nodes per core performing parallel computations. Then, we define the structure of the minimum building block, i.e., the dot-product unit, denoted as a node. A node netlist is used to describe the 6-device circuit topology using directed 2-pin nets to represent the waveguide connections and signal flow. 
+We first define the architecture parameters: **R** tiles, each containing **C** cores, with **H** $\times$ **W** dot-product nodes per core performing parallel computations. Then, we define the structure of the minimum building block, i.e., the dot-product unit, denoted as a node. A node netlist is used to describe the 6-device circuit topology using directed 2-pin nets to represent the waveguide connections and signal flow.
 
 To efficiently span the multi-
 core architecture without manually detailing every connection, we
 define scaling rules applied to each node and describe inter-node
-connections. There are **RCHW** total nodes for parallel dot-product. As the output of C cores in a tile are in-situ accumulated, integrators/ADCs can be shared and thus scaled by **CHW** . MZM group A encodes one matrix operand and can be broadcast to R tiles. Thus, the input encoders, i.e., DAC A and MZM A, are scaled by **RH**. 
+connections. There are **RCHW** total nodes for parallel dot-product. As the output of C cores in a tile are in-situ accumulated, integrators/ADCs can be shared and thus scaled by **CHW** . MZM group A encodes one matrix operand and can be broadcast to R tiles. Thus, the input encoders, i.e., DAC A and MZM A, are scaled by **RH**.
 These scaling rules are expressed as customizable symbolic expressions in circuit description files, enabling user-defined reuse styles to suit specific designs.
 <p align="center">
   <img src="figs/ParametricTeMPO.jpg" width="650" height="400"/>
@@ -86,7 +86,7 @@ In this folder, we provide [Lightning Transformer](https://arxiv.org/abs/2305.19
 - **Device Libraries**:
   - **Photonic Devices**: Includes energy, area, latency, and insertion loss parameters.
   - **Electronic Devices**: Provides detailed models for electronic components.
-- **Memory Computation**: Supports bandwidth aware memory hierarchies 
+- **Memory Computation**: Supports bandwidth aware memory hierarchies
 - **Integration with TorchONN**: Seamless integration for optical neural network simulations.
 - **Detailed Simulation Report**: Reports from Simphony contain detailed information on each device and each memory hierarchy's energy, and area breakdown. It also provides detailed insertion loss analysis with critical path defined.
 
@@ -137,4 +137,3 @@ Please go over each example in the ```unitest``` folder in the following order:
 7. ```test_area.py```
 8. ```test_memory.py```
 9. ```test_sim.py```
-

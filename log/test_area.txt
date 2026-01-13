@@ -1,4 +1,4 @@
-2024-11-27 18:03:15,938 - simulator.py[line:399] - INFO: 
+2024-11-27 18:03:15,938 - simulator.py[line:399] - INFO:
 ============================================================================================
                                 Simphony: ONN Arch Simulator v0.0.1
                                     Ziang Yin
@@ -49,7 +49,7 @@ input_shape: (2, 3, 32, 32)
 2024-11-27 18:03:18,105 - lsq.py[line:115] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int8 quantization with offset: True
 2024-11-27 18:03:18,106 - lsq.py[line:115] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int8 quantization with offset: True
 2024-11-27 18:03:18,107 - lsq.py[line:115] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int8 quantization with offset: True
-2024-11-27 18:03:18,109 - simulator.py[line:408] - INFO: 
+2024-11-27 18:03:18,109 - simulator.py[line:408] - INFO:
 ================================== Report: Area Cost (Breakdown) (um^2) ===================================
 
 LT:
@@ -173,12 +173,12 @@ LT:
     chip_type: PIC_1
     total_area: 13464576.0
 
-2024-11-27 18:03:18,110 - simulator.py[line:408] - INFO: 
+2024-11-27 18:03:18,110 - simulator.py[line:408] - INFO:
 ================================== Report: Total Area (um^2) ===================================
 
 LT: 66501954.24
 
-2024-11-27 18:03:18,110 - simulator.py[line:408] - INFO: 
+2024-11-27 18:03:18,110 - simulator.py[line:408] - INFO:
 ================================== Report: Chip Area (um^2) ===================================
 
 LT:
@@ -194,4 +194,3 @@ LT:
   PIC_2:
     devices: ['core_laser_splitter_0_i6-Customized_Laser_Splitter', 'core_mzm_0_i9-LT_MZM']
     total_area: 1498011.84
-

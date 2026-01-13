@@ -124,7 +124,7 @@ def initalize_all_devices_power(
     components: Dict[str, Any],
     insertion_loss: float,
 ) -> Dict[str, Any]:
-    R  = sub_arch.get("tiles", None)
+    R = sub_arch.get("tiles", None)
     C = sub_arch.get("cores_per_tile", None)
     core_config = sub_arch.get("core", {})
     H = core_config.get("height", 1)
@@ -134,7 +134,12 @@ def initalize_all_devices_power(
     extinction_ratio = 0
     sensitivity = -27  # Default value
     laser_power_distribution_factor = evaluate_factors(
-        core_config.get("netlist", {}).get("laser_power_distribution_factor", 1), R, C, H, W, N
+        core_config.get("netlist", {}).get("laser_power_distribution_factor", 1),
+        R,
+        C,
+        H,
+        W,
+        N,
     )
     in_bit = core_config.get("precision", {}).get("in_bit", 8)
     out_bit = core_config.get("precision", {}).get("out_bit", 8)
@@ -313,7 +318,7 @@ def energy_calculator(
     # but not for energy calculation
     # TODO: Add support for multiple nodes per core
     components.pop("node")
-    
+
     # Initalize all devices' power and count
     # This will return a dictionary of devices with their power and count
     # All devices declared in the instance will be initialized, including both core and node devices

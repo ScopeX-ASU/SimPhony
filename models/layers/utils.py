@@ -32,7 +32,6 @@ __all__ = [
 DEBUG = False
 
 
-
 def polynomial(x: Tensor, coeff: Tensor) -> Tensor:
     ## coeff: from high to low order coefficient, last one is constant
     ## e.g., [p5, p4, p3, p2, p1, p0] -> p5*x^5 + p4*x^4 + p3*x^3 + p2*x^2 + p1*x + p0

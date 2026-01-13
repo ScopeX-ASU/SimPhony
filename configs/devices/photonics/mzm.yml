@@ -59,5 +59,3 @@ mzm:
       testing_bit: 1  # Here is the b bit for efficiency
       eo_bandwidth: 12.5 # GHz
       modulation_speed: 25 # Gbps
-
-  

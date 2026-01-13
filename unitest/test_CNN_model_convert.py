@@ -44,6 +44,3 @@ index = 0
 for layer in onn_model.named_children():
     print(f"index{index}: {layer}")
     index += 1
-
-
-

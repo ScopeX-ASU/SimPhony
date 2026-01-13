@@ -1,4 +1,4 @@
-2024-11-27 18:41:07,408 - simulator.py[line:399] - INFO: 
+2024-11-27 18:41:07,408 - simulator.py[line:399] - INFO:
 ============================================================================================
                                 Simphony: ONN Arch Simulator v0.0.1
                                     Ziang Yin
@@ -582,7 +582,7 @@ input_shape: (2, 3, 224, 224)
 2024-11-27 18:41:07,864 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
 2024-11-27 18:41:07,865 - utils.py[line:961] - INFO: LSQ Weight quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: False
 2024-11-27 18:41:07,865 - utils.py[line:826] - INFO: LSQ Act quantizer: (mode: tensor_wise): initialize weight scale for int4 quantization with offset: True
-2024-11-27 18:41:07,870 - simulator.py[line:408] - INFO: 
+2024-11-27 18:41:07,870 - simulator.py[line:408] - INFO:
 ================================== Report: Partition Cycles ===================================
 
 LT:
@@ -636,7 +636,7 @@ LT:
   layers.11.linear1.linear: (64, 64, 17, 3072, 768, 394, 1, 1)
   layers.11.linear2.linear: (16, 256, 17, 768, 3072, 394, 1, 1)
 
-2024-11-27 18:41:07,871 - simulator.py[line:408] - INFO: 
+2024-11-27 18:41:07,871 - simulator.py[line:408] - INFO:
 ================================== Report: Insertion Loss (Breakdown) ===================================
 
 LT:
@@ -645,7 +645,7 @@ LT:
   core_path: ['i4', 'i5', 'i6_0', 'i6_1', 'i6_2', 'i6_3', 'i3_0', 'i3_1', 'i0', 'i7']
   core_insertion_loss: 6.220000000000001
 
-2024-11-27 18:41:08,011 - simulator.py[line:408] - INFO: 
+2024-11-27 18:41:08,011 - simulator.py[line:408] - INFO:
 ================================== Report: Energy Cost (Breakdown) (pJ) ===================================
 
 LT:
@@ -826,19 +826,19 @@ LT:
     total_static_energy: 0.0
     total_energy: 0.0
 
-2024-11-27 18:41:08,011 - simulator.py[line:408] - INFO: 
+2024-11-27 18:41:08,011 - simulator.py[line:408] - INFO:
 ================================== Report: Total Energy (pJ) ===================================
 
 LT: 5966552562.537322
 
-2024-11-27 18:41:08,011 - simulator.py[line:408] - INFO: 
+2024-11-27 18:41:08,011 - simulator.py[line:408] - INFO:
 ================================== Report: Final Computation Latency (s) ===================================
 
 LT:
   total_tuning_latency: 0.00504832
   total_static_latency: 0.005107616
 
-2024-11-27 18:41:08,011 - simulator.py[line:408] - INFO: 
+2024-11-27 18:41:08,011 - simulator.py[line:408] - INFO:
 ================================== Report: Chip Energy (pJ) ===================================
 
 LT:
@@ -859,7 +859,7 @@ LT:
     total_dynamic_energy: 327131135.99999994
     total_static_energy: 0.0
 
-2024-11-27 18:41:08,012 - simulator.py[line:408] - INFO: 
+2024-11-27 18:41:08,012 - simulator.py[line:408] - INFO:
 ================================== Report: Area Cost (Breakdown) (um^2) ===================================
 
 LT:
@@ -983,12 +983,12 @@ LT:
     chip_type: PIC_1
     total_area: 13464576.0
 
-2024-11-27 18:41:08,012 - simulator.py[line:408] - INFO: 
+2024-11-27 18:41:08,012 - simulator.py[line:408] - INFO:
 ================================== Report: Total Area (um^2) ===================================
 
 LT: 66501954.24
 
-2024-11-27 18:41:08,012 - simulator.py[line:408] - INFO: 
+2024-11-27 18:41:08,012 - simulator.py[line:408] - INFO:
 ================================== Report: Chip Area (um^2) ===================================
 
 LT:
@@ -1005,7 +1005,7 @@ LT:
     devices: ['core_laser_splitter_0_i6-Customized_Laser_Splitter', 'core_mzm_0_i9-LT_MZM']
     total_area: 1498011.84
 
-2024-11-27 18:41:08,013 - simulator.py[line:408] - INFO: 
+2024-11-27 18:41:08,013 - simulator.py[line:408] - INFO:
 ================================== Report: Memory Latency (s) ===================================
 
 LT:
@@ -1353,7 +1353,7 @@ LT:
     RF_input_latency: 4.1610996e-17
     RF_output_latency: 5.5481327999999996e-17
 
-2024-11-27 18:41:08,013 - simulator.py[line:408] - INFO: 
+2024-11-27 18:41:08,013 - simulator.py[line:408] - INFO:
 ================================== Report: Memory Energy (pJ) ===================================
 
 LT:
@@ -1362,7 +1362,7 @@ LT:
   GLB1: 6733288652.267519
   RF: 6734754937.159679
 
-2024-11-27 18:41:08,013 - simulator.py[line:408] - INFO: 
+2024-11-27 18:41:08,013 - simulator.py[line:408] - INFO:
 ================================== Report: Memory Specification ===================================
 
 HBM:
@@ -1417,4 +1417,3 @@ RF:
   width: 0.11828
   gate_leakage_power: 0.0208221
   leakage_power: 0.00434909
-

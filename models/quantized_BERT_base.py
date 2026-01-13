@@ -13,6 +13,7 @@ __all__ = [
     "QBertViTBase",
 ]
 
+
 class ConvolutionalEmbedding(nn.Module):
     def __init__(
         self,

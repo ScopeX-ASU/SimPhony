@@ -162,7 +162,7 @@ class QAttention(nn.Module):
         )  # [B, N, inner_dim]
 
         output = self.proj(attn_output)  # [B, N, dim]
-        
+
         return output
 
     def extra_repr(self):

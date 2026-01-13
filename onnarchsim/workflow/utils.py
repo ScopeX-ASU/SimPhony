@@ -180,7 +180,6 @@ def check_layer_mapping(
 
             core_precision = sub_arch["core"]["precision"]
 
-
             partition_size = [
                 sub_arch["tiles"],
                 sub_arch["cores_per_tile"],
@@ -203,7 +202,6 @@ def check_layer_mapping(
                     arch_attr = core_precision[attr]
                 elif attr == "miniblock":
                     arch_attr = partition_size
-
 
                 if model_attr != arch_attr:
                     lg.warning(
@@ -335,7 +333,7 @@ def load_device_and_count(
     temporal_factor_config = config["netlist"].get("temporal_accum_factor", {})
     temporal_effected_devices = temporal_factor_config.get("devices", [])
     temporal_factor = temporal_factor_config.get("duration", 1)
-    
+
     # Count instances and load power for each device type
     for instance, device_choice in config["netlist"]["instances"].items():
         device_type, device_index = device_choice
@@ -412,7 +410,9 @@ def load_device_and_count(
         elif prefix == "core" and device_type == "node":
             components[device_type] = {}
             components[device_type]["instance"] = instance
-            components[device_type]["chip_type"] = parse_chip_mappings(instance, chip_mappings)
+            components[device_type]["chip_type"] = parse_chip_mappings(
+                instance, chip_mappings
+            )
         else:
             raise ValueError(f"Device type {device_type} not match in config devices")
 
@@ -453,7 +453,9 @@ def load_required_devices(
 class LayerSizeTracker(object):
     def __init__(self):
         self.layer_shape = {}
-        self.layer_sizes = {}  # Stores actual sizes (in bytes) of weights, inputs, and outputs
+        self.layer_sizes = (
+            {}
+        )  # Stores actual sizes (in bytes) of weights, inputs, and outputs
 
     def get_size(self, module, input, output):
         if "matmul" in module.__class__.__name__.lower():
@@ -489,10 +491,7 @@ class LayerSizeTracker(object):
         else:
             # Calculate weight size if weights are available
             weight_size = 0
-            if (
-                hasattr(module, "weights")
-                and module.weights is not None
-            ):
+            if hasattr(module, "weights") and module.weights is not None:
                 # for mode, weight_info in module.weights.items():
                 for weight in module.weights[mode]:
                     weight_size += weight.numel() * w_bits / 8

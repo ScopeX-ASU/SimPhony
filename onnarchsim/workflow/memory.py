@@ -405,9 +405,9 @@ def generate_memory_setting(
             if (
                 final_sram_cache >= required_cache_size
             ):  # If the final cache size is larger than the required cache size
-                memory_simulation_results[memory_type]["total_cache_size"] = (
-                    final_sram_cache
-                )
+                memory_simulation_results[memory_type][
+                    "total_cache_size"
+                ] = final_sram_cache
             else:  # If the final cache size is smaller than the required cache size, increase the cache size to the next multiple of the template cache size
                 temp_required_size = math.ceil(
                     required_cache_size / template_cache_size
@@ -551,12 +551,17 @@ def calculate_memory_latency_and_energy(
         # memory_simulation_results["GLB1"]["read_energy"] * (GLB1_input_size + GLB2_weight_size) * GLB1_input_loading_iterations +
         #
         # memory_total_energy["GLB2"] +=
-        memory_total_energy["HBM"] += (
-            memory_simulation_results["HBM"]["write_energy"]
-            * (GLB2_output_size)  # Output data from GLB2 to HBM
-            + memory_simulation_results["HBM"]["read_energy"]
-            * (GLB2_input_size + GLB2_weight_size)  # Input data from HBM to GLB2
-        )
+        memory_total_energy["HBM"] += memory_simulation_results["HBM"][
+            "write_energy"
+        ] * (
+            GLB2_output_size
+        ) + memory_simulation_results[  # Output data from GLB2 to HBM
+            "HBM"
+        ][
+            "read_energy"
+        ] * (
+            GLB2_input_size + GLB2_weight_size
+        )  # Input data from HBM to GLB2
 
         memory_total_energy["GLB2"] += (
             memory_simulation_results["GLB2"]["write_energy"]
@@ -594,18 +599,15 @@ def calculate_memory_latency_and_energy(
         )
 
         memory_total_energy["RF"] += (
-            (
-                memory_simulation_results["RF"]["write_energy"]
-                * (
-                    RF_input_size * RF_input_iteration
-                    + RF_weight_iteration * RF_weight_size
-                )  # Input data from GLB1 to RF
-                + memory_simulation_results["RF"]["read_energy"]
-                * (RF_output_iteration * RF_output_size)
-                / output_factor  # Output data from RF to GLB1
-            )
-            * 2
-        )  # RF considers both the data from/to GLB1, and the data from ADC and to DAC
+            memory_simulation_results["RF"]["write_energy"]
+            * (
+                RF_input_size * RF_input_iteration
+                + RF_weight_iteration * RF_weight_size
+            )  # Input data from GLB1 to RF
+            + memory_simulation_results["RF"]["read_energy"]
+            * (RF_output_iteration * RF_output_size)
+            / output_factor  # Output data from RF to GLB1
+        ) * 2  # RF considers both the data from/to GLB1, and the data from ADC and to DAC
 
         # PTCim: The first open source, data dependent, and scalable photonic tensor core simulator
 
@@ -629,7 +631,9 @@ def calculate_memory_latency_and_energy(
 
         RF_input_latency = (RF_input_size + RF_weight_size) / memory_simulation_results[
             "RF"
-        ]["bandwidth"]  # Bytes / Bytes/second = second
+        ][
+            "bandwidth"
+        ]  # Bytes / Bytes/second = second
         RF_output_latency = (
             RF_output_size / memory_simulation_results["RF"]["bandwidth"]
         )  # Bytes / Bytes/second = second

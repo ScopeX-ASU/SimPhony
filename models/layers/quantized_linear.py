@@ -10,10 +10,7 @@ from torch.nn import Parameter
 from torch.types import Device
 
 from .quantized_base_layer import QBaseLayer
-from .utils import (
-    ActQuantizer_LSQ,
-    WeightQuantizer_LSQ,
-)
+from .utils import ActQuantizer_LSQ, WeightQuantizer_LSQ
 
 __all__ = [
     "QLinear",

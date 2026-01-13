@@ -10,5 +10,3 @@ large_insertion:
       insertion_loss: 50 # dB
       crosstalk: -45 # dB
       wavelength: [1460, 1640] # nm
-
-      

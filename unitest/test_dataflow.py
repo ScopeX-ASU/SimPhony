@@ -50,9 +50,7 @@ sim = ONNArchSimulator(
 )
 
 # Calculate the cycles required for each layer
-partition_cycles = sim.simu_partition_cycles(
-    sim.layer_workloads, sim.layer_sizes
-)
+partition_cycles = sim.simu_partition_cycles(sim.layer_workloads, sim.layer_sizes)
 sim.log_report(
     partition_cycles,
     header="Partition Cycles (Iter_N, Iter_D, Iter_M, N, D, M, Forward Factor W, Forward Factor Input)",

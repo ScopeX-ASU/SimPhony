@@ -62,9 +62,7 @@ def test_sim():
         input_shape=(2, 3, 224, 224),
         log_path="log/test_lt_log.txt",
     )
-    partition_cycles = sim.simu_partition_cycles(
-        sim.layer_workloads, sim.layer_sizes
-    )
+    partition_cycles = sim.simu_partition_cycles(sim.layer_workloads, sim.layer_sizes)
 
     sim.log_report(partition_cycles, header="Partition Cycles")
 
