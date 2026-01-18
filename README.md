@@ -1,10 +1,10 @@
 <p align="center">
-<img src="figs/simphony_logo.png" alt="simphony Logo" width="450">
+<img src="figs/simphony_logo.png" alt="simphony Logo" width="400">
 </p>
 <h2><p align="center">SimPhony: A Device-Circuit-Architecture Cross-Layer Modeling and Simulation Framework for Heterogeneous Electronic-Photonic AI Systems</p></h2>
 <p align="center">
-    <a href="https://github.com/JeremieMelo/pytorch-onn/blob/main/LICENSE">
-        <img alt="License" src="https://img.shields.io/github/license/JeremieMelo/pytorch-onn">
+    <a href="https://github.com/ScopeX-ASU/SimPhony/blob/main/LICENSE">
+        <img alt="License" src="https://img.shields.io/github/license/ScopeX-ASU/SimPhony">
     </a>
 </p>
 
